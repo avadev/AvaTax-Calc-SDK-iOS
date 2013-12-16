@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D498272E185FA78100807C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
+		D4982730185FA78100807C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272F185FA78100807C24 /* CoreGraphics.framework */; };
+		D4982732185FA78100807C24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4982731185FA78100807C24 /* UIKit.framework */; };
+		D4982738185FA78100807C24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4982736185FA78100807C24 /* InfoPlist.strings */; };
+		D498273A185FA78100807C24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4982739185FA78100807C24 /* main.m */; };
+		D498273E185FA78100807C24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D498273D185FA78100807C24 /* AppDelegate.m */; };
+		D4982740185FA78100807C24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D498273F185FA78100807C24 /* Images.xcassets */; };
+		D4982747185FA78100807C24 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4982746185FA78100807C24 /* XCTest.framework */; };
+		D4982748185FA78100807C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
+		D4982749185FA78100807C24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4982731185FA78100807C24 /* UIKit.framework */; };
+		D4982751185FA78100807C24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D498274F185FA78100807C24 /* InfoPlist.strings */; };
+		D4982753185FA78100807C24 /* AvaTax_CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4982752185FA78100807C24 /* AvaTax_CalcTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D498274A185FA78100807C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4982722185FA78100807C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4982729185FA78100807C24;
+			remoteInfo = "AvaTax-Calc";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D498272A185FA78100807C24 /* AvaTax-Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AvaTax-Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D498272D185FA78100807C24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D498272F185FA78100807C24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D4982731185FA78100807C24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4982735185FA78100807C24 /* AvaTax-Calc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AvaTax-Calc-Info.plist"; sourceTree = "<group>"; };
+		D4982737185FA78100807C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4982739185FA78100807C24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D498273B185FA78100807C24 /* AvaTax-Calc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AvaTax-Calc-Prefix.pch"; sourceTree = "<group>"; };
+		D498273C185FA78100807C24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D498273D185FA78100807C24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D498273F185FA78100807C24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D4982745185FA78100807C24 /* AvaTax-CalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AvaTax-CalcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4982746185FA78100807C24 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D498274E185FA78100807C24 /* AvaTax-CalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AvaTax-CalcTests-Info.plist"; sourceTree = "<group>"; };
+		D4982750185FA78100807C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4982752185FA78100807C24 /* AvaTax_CalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvaTax_CalcTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4982727185FA78100807C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4982730185FA78100807C24 /* CoreGraphics.framework in Frameworks */,
+				D4982732185FA78100807C24 /* UIKit.framework in Frameworks */,
+				D498272E185FA78100807C24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4982742185FA78100807C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4982747185FA78100807C24 /* XCTest.framework in Frameworks */,
+				D4982749185FA78100807C24 /* UIKit.framework in Frameworks */,
+				D4982748185FA78100807C24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4982721185FA78100807C24 = {
+			isa = PBXGroup;
+			children = (
+				D4982733185FA78100807C24 /* AvaTax-Calc */,
+				D498274C185FA78100807C24 /* AvaTax-CalcTests */,
+				D498272C185FA78100807C24 /* Frameworks */,
+				D498272B185FA78100807C24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D498272B185FA78100807C24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D498272A185FA78100807C24 /* AvaTax-Calc.app */,
+				D4982745185FA78100807C24 /* AvaTax-CalcTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D498272C185FA78100807C24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D498272D185FA78100807C24 /* Foundation.framework */,
+				D498272F185FA78100807C24 /* CoreGraphics.framework */,
+				D4982731185FA78100807C24 /* UIKit.framework */,
+				D4982746185FA78100807C24 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4982733185FA78100807C24 /* AvaTax-Calc */ = {
+			isa = PBXGroup;
+			children = (
+				D498273C185FA78100807C24 /* AppDelegate.h */,
+				D498273D185FA78100807C24 /* AppDelegate.m */,
+				D498273F185FA78100807C24 /* Images.xcassets */,
+				D4982734185FA78100807C24 /* Supporting Files */,
+			);
+			path = "AvaTax-Calc";
+			sourceTree = "<group>";
+		};
+		D4982734185FA78100807C24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4982735185FA78100807C24 /* AvaTax-Calc-Info.plist */,
+				D4982736185FA78100807C24 /* InfoPlist.strings */,
+				D4982739185FA78100807C24 /* main.m */,
+				D498273B185FA78100807C24 /* AvaTax-Calc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D498274C185FA78100807C24 /* AvaTax-CalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4982752185FA78100807C24 /* AvaTax_CalcTests.m */,
+				D498274D185FA78100807C24 /* Supporting Files */,
+			);
+			path = "AvaTax-CalcTests";
+			sourceTree = "<group>";
+		};
+		D498274D185FA78100807C24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D498274E185FA78100807C24 /* AvaTax-CalcTests-Info.plist */,
+				D498274F185FA78100807C24 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4982729185FA78100807C24 /* AvaTax-Calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4982756185FA78100807C24 /* Build configuration list for PBXNativeTarget "AvaTax-Calc" */;
+			buildPhases = (
+				D4982726185FA78100807C24 /* Sources */,
+				D4982727185FA78100807C24 /* Frameworks */,
+				D4982728185FA78100807C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AvaTax-Calc";
+			productName = "AvaTax-Calc";
+			productReference = D498272A185FA78100807C24 /* AvaTax-Calc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4982744185FA78100807C24 /* AvaTax-CalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4982759185FA78100807C24 /* Build configuration list for PBXNativeTarget "AvaTax-CalcTests" */;
+			buildPhases = (
+				D4982741185FA78100807C24 /* Sources */,
+				D4982742185FA78100807C24 /* Frameworks */,
+				D4982743185FA78100807C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D498274B185FA78100807C24 /* PBXTargetDependency */,
+			);
+			name = "AvaTax-CalcTests";
+			productName = "AvaTax-CalcTests";
+			productReference = D4982745185FA78100807C24 /* AvaTax-CalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4982722185FA78100807C24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Avalara;
+				TargetAttributes = {
+					D4982744185FA78100807C24 = {
+						TestTargetID = D4982729185FA78100807C24;
+					};
+				};
+			};
+			buildConfigurationList = D4982725185FA78100807C24 /* Build configuration list for PBXProject "AvaTax-Calc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D4982721185FA78100807C24;
+			productRefGroup = D498272B185FA78100807C24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4982729185FA78100807C24 /* AvaTax-Calc */,
+				D4982744185FA78100807C24 /* AvaTax-CalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4982728185FA78100807C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4982738185FA78100807C24 /* InfoPlist.strings in Resources */,
+				D4982740185FA78100807C24 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4982743185FA78100807C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4982751185FA78100807C24 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4982726185FA78100807C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D498273E185FA78100807C24 /* AppDelegate.m in Sources */,
+				D498273A185FA78100807C24 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4982741185FA78100807C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4982753185FA78100807C24 /* AvaTax_CalcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D498274B185FA78100807C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4982729185FA78100807C24 /* AvaTax-Calc */;
+			targetProxy = D498274A185FA78100807C24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4982736185FA78100807C24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4982737185FA78100807C24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D498274F185FA78100807C24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4982750185FA78100807C24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4982754185FA78100807C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4982755185FA78100807C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4982757185FA78100807C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AvaTax-Calc/AvaTax-Calc-Prefix.pch";
+				INFOPLIST_FILE = "AvaTax-Calc/AvaTax-Calc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4982758185FA78100807C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AvaTax-Calc/AvaTax-Calc-Prefix.pch";
+				INFOPLIST_FILE = "AvaTax-Calc/AvaTax-Calc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D498275A185FA78100807C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AvaTax-Calc.app/AvaTax-Calc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AvaTax-Calc/AvaTax-Calc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AvaTax-CalcTests/AvaTax-CalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D498275B185FA78100807C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AvaTax-Calc.app/AvaTax-Calc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AvaTax-Calc/AvaTax-Calc-Prefix.pch";
+				INFOPLIST_FILE = "AvaTax-CalcTests/AvaTax-CalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4982725185FA78100807C24 /* Build configuration list for PBXProject "AvaTax-Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4982754185FA78100807C24 /* Debug */,
+				D4982755185FA78100807C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4982756185FA78100807C24 /* Build configuration list for PBXNativeTarget "AvaTax-Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4982757185FA78100807C24 /* Debug */,
+				D4982758185FA78100807C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D4982759185FA78100807C24 /* Build configuration list for PBXNativeTarget "AvaTax-CalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D498275A185FA78100807C24 /* Debug */,
+				D498275B185FA78100807C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4982722185FA78100807C24 /* Project object */;
+}
