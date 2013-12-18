@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SampleGetTaxCall.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    SampleGetTaxCall* sample = [[SampleGetTaxCall alloc] init];
+    [sample performGetTaxRequest];
+    
     return YES;
 }
 
