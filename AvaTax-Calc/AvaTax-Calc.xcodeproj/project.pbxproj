@@ -98,6 +98,7 @@
 		D49827A218622F8B00807C24 /* AvaTaxCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvaTaxCalc.m; path = "../AvaTax-Calc/AvaTaxCalc.m"; sourceTree = "<group>"; };
 		D49827A61862333500807C24 /* ATWebCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATWebCall.h; sourceTree = "<group>"; };
 		D49827A71862333500807C24 /* ATWebCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATWebCall.m; sourceTree = "<group>"; };
+		D49827AB18626B6F00807C24 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../third_party/gh-unit-framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 		D498272C185FA78100807C24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D49827AB18626B6F00807C24 /* GHUnitIOS.framework */,
 				D498272D185FA78100807C24 /* Foundation.framework */,
 				D498272F185FA78100807C24 /* CoreGraphics.framework */,
 				D4982731185FA78100807C24 /* UIKit.framework */,
