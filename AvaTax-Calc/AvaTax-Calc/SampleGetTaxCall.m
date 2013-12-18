@@ -7,7 +7,7 @@
 //
 
 #import "SampleGetTaxCall.h"
-#import "RBTBase64.h"
+#import "AvaTaxCalc.h"
 
 @implementation SampleGetTaxCall
 
@@ -20,41 +20,12 @@
 }
 
 - (void)performGetTaxRequest {
-    NSString* url = @"https://development.avalara.net/1.0/tax/get/";
-    NSString* userName = @"rob.busack";
+    NSString* username = @"rob.busack";
     NSString* password = @"";
-    NSString* loginString = [NSString stringWithFormat:@"%@:%@", userName, password];
-    NSString* encodedLoginData = [RBTBase64 encode:[loginString dataUsingEncoding:NSUTF8StringEncoding]];
     
-    NSString* authHeader = [@"Basic " stringByAppendingString:encodedLoginData];
+    AvaTaxCalc* avaTaxInterface = [[AvaTaxCalc alloc] initWithUser:username password:password];
     
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[[self samplePostJson] dataUsingEncoding:NSUTF16StringEncoding]];
-    [request addValue:authHeader forHTTPHeaderField:@"Authorization"];
-    
-    
-    
-    // need to release this later
-    NSURLConnection* connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-
-    receivedData = [[NSMutableData alloc] init];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	[receivedData appendData:data];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"%@", [self responseAsString]);
-}
-
-- (NSString*) responseAsString {
-	NSString *responseAsString = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-	return responseAsString;
+    [avaTaxInterface getTax:[self samplePostJson]];
 }
 
 @end

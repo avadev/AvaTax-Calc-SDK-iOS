@@ -1,1 +1,9 @@
 AvaTax-Calc/build
+
+# Xcode
+*.pbxuser
+*.xcuserstate
+*.xcscheme
+project.xcworkspace/
+xcuserdata/
+AvaTax-Calc/AvaTax-Calc.xcodeproj/xcuserdata/*
