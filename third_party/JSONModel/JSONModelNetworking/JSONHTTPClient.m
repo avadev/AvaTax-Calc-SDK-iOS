@@ -14,6 +14,7 @@
 //
 // The MIT License in plain English: http://www.touch-code-magazine.com/JSONModel/MITLicense
 
+#import <UIKit/UIKit.h>
 #import "JSONHTTPClient.h"
 
 #pragma mark - constants
