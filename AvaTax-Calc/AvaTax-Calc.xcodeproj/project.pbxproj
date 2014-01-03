@@ -42,6 +42,7 @@
 		D4C42619187760980030EF00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C42618187760980030EF00 /* QuartzCore.framework */; };
 		D4C4261A187760A30030EF00 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49827AB18626B6F00807C24 /* GHUnitIOS.framework */; };
 		D4C4261C1877699E0030EF00 /* ATWebCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D49827A71862333500807C24 /* ATWebCall.m */; };
+		D4C4261F187771FF0030EF00 /* JSONModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4261E187771FF0030EF00 /* JSONModelTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +114,8 @@
 		D4C425F718775FD20030EF00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4C425F918775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AvaTax-Calc-SDK-GHUnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		D4C42618187760980030EF00 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D4C4261D187771FF0030EF00 /* JSONModelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelTests.h; sourceTree = "<group>"; };
+		D4C4261E187771FF0030EF00 /* JSONModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +305,8 @@
 		D4C425F118775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4C4261D187771FF0030EF00 /* JSONModelTests.h */,
+				D4C4261E187771FF0030EF00 /* JSONModelTests.m */,
 				D4C425F218775FD20030EF00 /* Supporting Files */,
 			);
 			path = "AvaTax-Calc-SDK-GHUnitTests";
@@ -458,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C425F818775FD20030EF00 /* main.m in Sources */,
+				D4C4261F187771FF0030EF00 /* JSONModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
