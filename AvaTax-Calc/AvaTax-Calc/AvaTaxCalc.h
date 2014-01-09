@@ -6,6 +6,15 @@
 //  Copyright (c) 2013 Avalara. All rights reserved.
 //
 
+@class GetTaxRequestBody;
+@class GetTaxResponseBody;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol AvaTaxDelegate
+
+- (void)getTaxFinished:(GetTaxResponseBody*)response;
+
+@end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc : NSObject
@@ -17,6 +26,6 @@
 @property (readonly) NSString* username;
 
 - (id)initWithUser:(NSString*)username password:(NSString *)password;
-- (void)getTax:(NSString*)postBody;
+- (void)getTax:(GetTaxRequestBody*)postBody;
 
 @end

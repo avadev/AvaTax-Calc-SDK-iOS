@@ -23,9 +23,13 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation ATWebCall
 
-- (id)initWithUrl:(NSString*)url {
+- (id)initWithUrl:(NSString*)url callbackTarget:(id)target selector:(SEL)selector {
     self = [super init];
     if (self) {
+        NSAssert2([target respondsToSelector:selector], @"%@ must respond to %@", target, NSStringFromSelector(selector));
+        
+        _target = target;
+        _selector = selector;
         _request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
     }
     return self;
@@ -60,6 +64,9 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"%@", [self responseAsString]);
+    if ([_target respondsToSelector:_selector]) {
+        [_target performSelector:_selector withObject:self];
+    }
 }
 
 - (NSString*) responseAsString {

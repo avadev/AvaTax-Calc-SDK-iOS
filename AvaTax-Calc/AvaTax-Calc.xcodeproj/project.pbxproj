@@ -43,6 +43,7 @@
 		D4C4261A187760A30030EF00 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49827AB18626B6F00807C24 /* GHUnitIOS.framework */; };
 		D4C4261C1877699E0030EF00 /* ATWebCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D49827A71862333500807C24 /* ATWebCall.m */; };
 		D4C4261F187771FF0030EF00 /* JSONModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4261E187771FF0030EF00 /* JSONModelTests.m */; };
+		D4C42622187E05CA0030EF00 /* GetTaxResponseBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C42621187E05CA0030EF00 /* GetTaxResponseBody.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -116,6 +117,8 @@
 		D4C42618187760980030EF00 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D4C4261D187771FF0030EF00 /* JSONModelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelTests.h; sourceTree = "<group>"; };
 		D4C4261E187771FF0030EF00 /* JSONModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelTests.m; sourceTree = "<group>"; };
+		D4C42620187E05CA0030EF00 /* GetTaxResponseBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTaxResponseBody.h; sourceTree = "<group>"; };
+		D4C42621187E05CA0030EF00 /* GetTaxResponseBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTaxResponseBody.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +232,8 @@
 				D4982764185FC07A00807C24 /* Supporting Files */,
 				D4C425B91877475A0030EF00 /* GetTaxRequestBody.h */,
 				D4C425BA1877475A0030EF00 /* GetTaxRequestBody.m */,
+				D4C42620187E05CA0030EF00 /* GetTaxResponseBody.h */,
+				D4C42621187E05CA0030EF00 /* GetTaxResponseBody.m */,
 			);
 			path = "AvaTax-Calc-SDK";
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				D4C4261C1877699E0030EF00 /* ATWebCall.m in Sources */,
 				D4C425BB1877475A0030EF00 /* GetTaxRequestBody.m in Sources */,
 				D4C425D7187747C50030EF00 /* JSONModelArray.m in Sources */,
+				D4C42622187E05CA0030EF00 /* GetTaxResponseBody.m in Sources */,
 				D4C425DD187747C50030EF00 /* JSONModel+networking.m in Sources */,
 				D49827A418622F8F00807C24 /* AvaTaxCalc.m in Sources */,
 				D4C425DB187747C50030EF00 /* JSONAPI.m in Sources */,

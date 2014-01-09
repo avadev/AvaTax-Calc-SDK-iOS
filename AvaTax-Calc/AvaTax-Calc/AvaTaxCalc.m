@@ -9,6 +9,8 @@
 #import "AvaTaxCalc.h"
 #import "RBTBase64.h"
 #import "ATWebCall.h"
+#import "GetTaxRequestBody.h"
+#import "GetTaxResponseBody.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc ()
@@ -38,12 +40,19 @@
     _encodedLoginData = [RBTBase64 encode:[loginString dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
-- (void)getTax:(NSString*)postBody {
+- (void)getTax:(GetTaxRequestBody*)postBody {
     NSString* url = @"https://development.avalara.net/1.0/tax/get/";
     
-    ATWebCall* webCall = [[ATWebCall alloc] initWithUrl:url];
+    ATWebCall* webCall = [[ATWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxFinished:)];
     [webCall addAuthFrom:self];
-    [webCall post:postBody];
+    [webCall post:[postBody toJSONString]];
+}
+
+- (void)getTaxFinished:(ATWebCall*)webCall {
+    JSONModelError* error = nil;
+    
+    NSString* responseAsString = [webCall responseAsString];
+    GetTaxResponseBody* response = [[GetTaxResponseBody alloc] initWithString:responseAsString error:&error];
 }
 
 @end

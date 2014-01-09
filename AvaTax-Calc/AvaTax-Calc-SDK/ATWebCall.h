@@ -13,11 +13,16 @@
 {
     NSMutableURLRequest* _request;
     NSMutableData* _receivedData;
+    
+    id _target;
+    SEL _selector;
 }
 
-- (id)initWithUrl:(NSString*)url;
+- (id)initWithUrl:(NSString*)url callbackTarget:(id)target selector:(SEL)selector;
 - (void)addAuthFrom:(AvaTaxCalc*)avaTaxInterface;
 - (void)get;
 - (void)post:(NSString*)body;
+
+- (NSString*) responseAsString;
 
 @end
