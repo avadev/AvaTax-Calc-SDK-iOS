@@ -28,9 +28,13 @@
     NSString* username = @"rob.busack";
     NSString* password = @"";
     
-    AvaTaxCalc* avaTaxInterface = [[AvaTaxCalc alloc] initWithUser:username password:password];
+    AvaTaxCalc* avaTaxInterface = [[AvaTaxCalc alloc] initWithDelegate:self user:username password:password];
     
     [avaTaxInterface getTax:[self samplePostJson]];
+}
+
+- (void)getTaxFinished:(GetTaxResponseBody*)response {
+    
 }
 
 @end

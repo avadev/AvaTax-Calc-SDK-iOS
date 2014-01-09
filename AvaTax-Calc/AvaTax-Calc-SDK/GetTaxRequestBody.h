@@ -11,6 +11,40 @@
 
 @class AvalaraAddress;
 @class AvalaraLine;
+@class RBTAvaTaxTaxOverride;
+
+typedef enum {
+    SalesOrder,
+    SalesInvoice,
+    ReturnOrder,
+    ReturnInvoice,
+    PurchaseOrder,
+    PurchaseInvoice
+} DocType;
+typedef enum  {
+    Tax,
+    Document,
+    Line,
+    Diagnostic
+} DetailLevel;
+typedef enum {
+    L,  //"Other",
+    A,  //"Federal government",
+    B,  //"State government",
+    C,  //"Tribe / Status Indian / Indian Band",
+    D,  //"Foreign diplomat",
+    E,  //"Charitable or benevolent organization",
+    F,  //"Regligious or educational organization",
+    G,  //"Resale",
+    H,  //"Commercial agricultural production",
+    I,  // "Industrial production / manufacturer",
+    J,  // "Direct pay permit",
+    K,  // "Direct Mail",
+    N,  // "Local Government",
+    P,  // "Commercial Aquaculture",
+    Q,  // "Commercial Fishery",
+    R   // "Non-resident"
+} SystemCustomerUsageType;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface GetTaxRequestBody : JSONModel
@@ -18,40 +52,65 @@
     
 }
 
-@property (strong,nonatomic) NSString* DocDate;
-@property (strong,nonatomic) NSString* CustomerCode;
-@property (strong,nonatomic) NSString* DetailLevel;
-@property (strong,nonatomic) NSArray* Addresses;
-@property (strong,nonatomic) NSArray* Lines;
+// Required for Tax Calculation
+@property NSString* DocDate;
+@property NSString* CustomerCode;
+@property NSArray*  Addresses;
+@property NSArray*  Lines;
+
+//Best Practice for tax calculation
+@property NSString<Optional>*   Client;
+@property NSString<Optional>*   DocCode;
+@property DocType               DocType;
+@property NSString<Optional>*   CompanyCode;
+@property bool                  Commit;
+@property DetailLevel DetailLevel;
+
+//Use where appropriate to the situation
+@property NSString<Optional>*   CustomerUsageType;
+@property NSString<Optional>*   ExemptionNo;
+@property int                   Discount;
+@property NSString<Optional>*   BusinessIdentificationNo;
+@property RBTAvaTaxTaxOverride<Optional>*   TaxOverride;
+
+//Optional
+@property NSString<Optional>*   PurchaseOrderNo;
+@property NSDate<Optional>*     PaymentDate;
+@property NSString<Optional>*   PosLaneCode;
+@property NSString<Optional>*   ReferenceCode;
 
 
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvalaraAddress : JSONModel
-{
-    
-}
 
-@property (strong,nonatomic) NSString* AddressCode;
-@property (strong,nonatomic) NSString* Line1;
-@property (strong,nonatomic) NSString* Line2;
-@property (strong,nonatomic) NSString* City;
-@property (strong,nonatomic) NSString* Region;
-@property (strong,nonatomic) NSString* PostalCode;
+@property NSString* AddressCode;
+@property NSString* Line1;
+@property NSString* Line2;
+@property NSString* City;
+@property NSString* Region;
+@property NSString* PostalCode;
 
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvalaraLine : JSONModel
-{
-    
-}
 
-@property (strong,nonatomic) NSString* LineNo;
-@property (strong,nonatomic) NSString* DesitnationCode;
-@property (strong,nonatomic) NSString* OriginCode;
-@property (assign,nonatomic) int Qty;
-@property (assign,nonatomic) int Amount;
+@property NSString* LineNo;
+@property NSString* DesitnationCode;
+@property NSString* OriginCode;
+@property int Qty;
+@property int Amount;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@interface RBTAvaTaxTaxOverride : JSONModel
+
+@property NSString *TaxOverrideType;   //TaxOverrideType
+@property NSNumber *TaxAmount;         //decimal
+@property NSDate *TaxDate;             //date
+@property NSString *Reason;            //string
 
 @end

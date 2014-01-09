@@ -25,9 +25,10 @@
 @synthesize username = _username;
 @synthesize encodedLoginData = _encodedLoginData;
 
-- (id)initWithUser:(NSString*)username password:(NSString *)password {
+- (id)initWithDelegate:(NSObject<AvaTaxDelegate>*)delegate user:(NSString*)username password:(NSString *)password {
     self = [super init];
     if (self) {
+        _delegate = delegate;
         [self setUsername:username password:password];
     }
     return self;
@@ -53,6 +54,7 @@
     
     NSString* responseAsString = [webCall responseAsString];
     GetTaxResponseBody* response = [[GetTaxResponseBody alloc] initWithString:responseAsString error:&error];
+    [_delegate getTaxFinished:response];
 }
 
 @end

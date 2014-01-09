@@ -21,11 +21,13 @@
 {
     NSString* _username;
     NSString* _encodedLoginData;
+    
+    NSObject<AvaTaxDelegate>* _delegate;
 }
 
 @property (readonly) NSString* username;
 
-- (id)initWithUser:(NSString*)username password:(NSString *)password;
+- (id)initWithDelegate:(NSObject<AvaTaxDelegate>*)delegate user:(NSString*)username password:(NSString *)password;
 - (void)getTax:(GetTaxRequestBody*)postBody;
 
 @end
