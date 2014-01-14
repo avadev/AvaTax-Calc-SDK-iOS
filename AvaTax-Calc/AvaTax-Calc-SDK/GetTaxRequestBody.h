@@ -61,7 +61,7 @@ typedef enum {
 //Best Practice for tax calculation
 @property NSString<Optional>*   Client;
 @property NSString<Optional>*   DocCode;
-@property DocType               DocType;
+@property NSNumber<Optional>*   DocType;
 @property NSString<Optional>*   CompanyCode;
 @property bool                  Commit;
 @property DetailLevel DetailLevel;

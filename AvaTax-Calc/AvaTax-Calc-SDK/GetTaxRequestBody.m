@@ -11,6 +11,17 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation GetTaxRequestBody
 
++(BOOL)propertyIsIgnored:(NSString*)propertyName {
+    if ([propertyName isEqualToString:@"Commit"]
+        || [propertyName isEqualToString:@"Discount"]
+        || [propertyName isEqualToString:@"DocType"]
+        || [propertyName isEqualToString:@"DetailLevel"]) {
+        return YES;
+    }
+    
+    return [super propertyIsIgnored:propertyName];
+}
+
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

@@ -10,20 +10,29 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface GetTaxResponseBody : JSONModel
-{
-    
-}
 
-@property (strong,nonatomic) NSString* ResultCode;
-@property (strong,nonatomic) NSString* DocCode;
-@property (strong,nonatomic) NSString* DocDate;
-@property (strong,nonatomic) NSString* Timestamp;
-@property (strong,nonatomic) NSString* TotalAmount;
-@property (strong,nonatomic) NSString* TotalDiscount;
-@property (strong,nonatomic) NSString* TotalExemption;
-@property (strong,nonatomic) NSString* TotalTaxable;
-@property (strong,nonatomic) NSString* TotalTax;
-@property (strong,nonatomic) NSString* TotalTaxCalculated;
-@property (strong,nonatomic) NSString* TaxDate;
+@property NSString* ResultCode;
+@property NSArray<Optional>* Messages;
+@property NSString<Optional>* DocCode;
+@property NSString<Optional>* DocDate;
+@property NSString<Optional>* Timestamp;
+@property NSString<Optional>* TotalAmount;
+@property NSString<Optional>* TotalDiscount;
+@property NSString<Optional>* TotalExemption;
+@property NSString<Optional>* TotalTaxable;
+@property NSString<Optional>* TotalTax;
+@property NSString<Optional>* TotalTaxCalculated;
+@property NSString<Optional>* TaxDate;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@interface GetTaxResultMessage : JSONModel
+
+@property NSString* Summary;
+@property NSString* Details;
+@property NSString* Severity;
+@property NSString* Source;
+@property NSString* RefersTo;
 
 @end
