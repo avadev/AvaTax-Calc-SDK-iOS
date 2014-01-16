@@ -9,6 +9,7 @@
 #import "SampleGetTaxCall.h"
 #import "AvaTaxCalc.h"
 #import "GetTaxRequestBody.h"
+#import "AvaTaxAddress.h"
 
 @implementation SampleGetTaxCall
 
@@ -31,6 +32,15 @@
     AvaTaxCalc* avaTaxInterface = [[AvaTaxCalc alloc] initWithDelegate:self user:username password:password];
     
     [avaTaxInterface getTax:[self samplePostJson]];
+    
+    
+    AvaTaxAddress* address = [[AvaTaxAddress alloc] init];
+    address.Address1 = @"645 W Nickerson St.";
+    address.Address2 = @"Apt. 301";
+    address.City = @"Seattle";
+    address.State = @"WA";
+    address.Zip = @"98119";
+    [avaTaxInterface validateAddress:address];
 }
 
 - (void)getTaxFinished:(GetTaxResponseBody*)response {

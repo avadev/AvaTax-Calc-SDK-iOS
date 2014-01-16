@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4865FF518887DDC005F9F6C /* AvaTaxAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */; };
 		D498272E185FA78100807C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
 		D4982730185FA78100807C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272F185FA78100807C24 /* CoreGraphics.framework */; };
 		D4982732185FA78100807C24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4982731185FA78100807C24 /* UIKit.framework */; };
@@ -60,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D4865FF318887DDC005F9F6C /* AvaTaxAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxAddress.h; sourceTree = "<group>"; };
+		D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxAddress.m; sourceTree = "<group>"; };
 		D498272A185FA78100807C24 /* AvaTax-Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AvaTax-Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D498272D185FA78100807C24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D498272F185FA78100807C24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -234,6 +237,8 @@
 				D4C425BA1877475A0030EF00 /* GetTaxRequestBody.m */,
 				D4C42620187E05CA0030EF00 /* GetTaxResponseBody.h */,
 				D4C42621187E05CA0030EF00 /* GetTaxResponseBody.m */,
+				D4865FF318887DDC005F9F6C /* AvaTaxAddress.h */,
+				D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */,
 			);
 			path = "AvaTax-Calc-SDK";
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 				D4C425D7187747C50030EF00 /* JSONModelArray.m in Sources */,
 				D4C42622187E05CA0030EF00 /* GetTaxResponseBody.m in Sources */,
 				D4C425DD187747C50030EF00 /* JSONModel+networking.m in Sources */,
+				D4865FF518887DDC005F9F6C /* AvaTaxAddress.m in Sources */,
 				D49827A418622F8F00807C24 /* AvaTaxCalc.m in Sources */,
 				D4C425DB187747C50030EF00 /* JSONAPI.m in Sources */,
 				D4C425DF187747C50030EF00 /* JSONValueTransformer.m in Sources */,
@@ -706,6 +712,7 @@
 				D4C4261318775FD30030EF00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

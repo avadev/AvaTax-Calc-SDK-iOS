@@ -11,6 +11,7 @@
 #import "ATWebCall.h"
 #import "GetTaxRequestBody.h"
 #import "GetTaxResponseBody.h"
+#import "AvaTaxAddress.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc ()
@@ -55,6 +56,21 @@
     NSString* responseAsString = [webCall responseAsString];
     GetTaxResponseBody* response = [[GetTaxResponseBody alloc] initWithString:responseAsString error:&error];
     [_delegate getTaxFinished:response];
+}
+
+- (void)validateAddress:(AvaTaxAddress*)address {
+    NSString *url = [NSString stringWithFormat:@"https://development.avalara.net/1.0/address/validate?Line1=%@&Line2=%@&City=%@&Region=%@&PostalCode=%@",address.Address1, address.Address2,address.City,address.State,address.Zip];
+    url = [url stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    ATWebCall* webCall = [[ATWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(validateAddressFinished:)];
+    [webCall addAuthFrom:self];
+    [webCall get];
+    
+}
+
+- (void)validateAddressFinished:(ATWebCall*)webCall {
+    NSString* responseAsString = [webCall responseAsString];
+    NSLog(@"%@", responseAsString);
 }
 
 @end
