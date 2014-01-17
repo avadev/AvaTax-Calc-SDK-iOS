@@ -12,6 +12,7 @@
 #import "GetTaxRequestBody.h"
 #import "GetTaxResponseBody.h"
 #import "AvaTaxAddress.h"
+#import "AvaTaxValidateAddressResponse.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc ()
@@ -69,8 +70,11 @@
 }
 
 - (void)validateAddressFinished:(ATWebCall*)webCall {
+    JSONModelError* error = nil;
+    
     NSString* responseAsString = [webCall responseAsString];
-    NSLog(@"%@", responseAsString);
+    AvaTaxValidateAddressResponse* response = [[AvaTaxValidateAddressResponse alloc] initWithString:responseAsString error:&error];
+    NSLog(@"%@", response);
 }
 
 @end

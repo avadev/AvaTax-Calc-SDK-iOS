@@ -6,13 +6,11 @@
 //  Copyright (c) 2014 Avalara. All rights reserved.
 //
 
-#import "JSONModel.h"
+#import "AvaTaxResponse.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface GetTaxResponseBody : JSONModel
+@interface GetTaxResponseBody : AvaTaxResponse
 
-@property NSString* ResultCode;
-@property NSArray<Optional>* Messages;
 @property NSString<Optional>* DocCode;
 @property NSString<Optional>* DocDate;
 @property NSString<Optional>* Timestamp;
@@ -23,16 +21,5 @@
 @property NSString<Optional>* TotalTax;
 @property NSString<Optional>* TotalTaxCalculated;
 @property NSString<Optional>* TaxDate;
-
-@end
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface GetTaxResultMessage : JSONModel
-
-@property NSString* Summary;
-@property NSString* Details;
-@property NSString* Severity;
-@property NSString* Source;
-@property NSString* RefersTo;
 
 @end

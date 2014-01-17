@@ -8,6 +8,8 @@
 
 #import "JSONModel.h"
 
+// http://developer.avalara.com/api-docs/rest/address-validation
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxAddress : JSONModel
 
@@ -16,19 +18,10 @@
 @property NSString *Address2;
 @property NSString *Address3;
 @property NSString *City;
-@property NSString *State;
+@property NSString *Region; // State
 @property NSString *Zip;
 @property NSString *Country;
 
-//@property NSString *ValAddress1;
-//@property NSString *ValAddress2;
-//@property NSString *ValCity;
-//@property NSString *ValState;
-//@property NSString *ValZip;
-//@property NSString *ValCounty;
-//@property NSString *ValFipsCode;
-//@property NSString *ValCarrierRoute;
-//@property NSString *ValPostNet;
-//@property NSString *ValAddressType;
+@property NSString *State;  // this gets & sets Region under the hood
 
 @end

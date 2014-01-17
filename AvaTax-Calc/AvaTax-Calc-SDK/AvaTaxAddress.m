@@ -10,4 +10,20 @@
 
 @implementation AvaTaxAddress
 
++(BOOL)propertyIsIgnored:(NSString*)propertyName  {
+    if ([propertyName isEqualToString:@"State"]) {
+        return YES;
+    }
+    
+    return [super propertyIsIgnored:propertyName];
+}
+
+- (NSString*)State {
+    return self.Region;
+}
+
+- (void)setState:(NSString *)State {
+    self.Region = State;
+}
+
 @end
