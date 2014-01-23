@@ -18,6 +18,15 @@
     return [super propertyIsIgnored:propertyName];
 }
 
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    if ([propertyName isEqualToString:@"Line1"]) {
+        return NO;
+    } else {
+        return YES; // everything except Line1 can be optional
+    }
+}
+
 - (NSString*)State {
     return self.Region;
 }

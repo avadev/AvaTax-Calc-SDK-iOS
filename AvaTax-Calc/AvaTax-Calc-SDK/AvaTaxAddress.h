@@ -13,13 +13,13 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxAddress : JSONModel
 
-@property NSString *AddressCode;
-@property NSString *Address1;
-@property NSString *Address2;
-@property NSString *Address3;
+//@property NSString *AddressCode;
+@property NSString *Line1;  // Address line 1
+@property NSString *Line2;
+@property NSString *Line3;
 @property NSString *City;
 @property NSString *Region; // State
-@property NSString *Zip;
+@property NSString *PostalCode;
 @property NSString *Country;
 
 @property NSString *State;  // this gets & sets Region under the hood

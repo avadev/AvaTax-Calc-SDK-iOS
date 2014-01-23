@@ -22,11 +22,11 @@ typedef enum {
     PurchaseInvoice
 } DocType;
 typedef enum  {
-    Tax,
-    Document,
-    Line,
-    Diagnostic
-} DetailLevel;
+    DetailLevel_Tax,
+    DetailLevel_Document,
+    DetailLevel_Line,
+    DetailLevel_Diagnostic
+} AvaTaxDetailLevel;
 typedef enum {
     L,  //"Other",
     A,  //"Federal government",
@@ -64,7 +64,7 @@ typedef enum {
 @property NSNumber<Optional>*   DocType;
 @property NSString<Optional>*   CompanyCode;
 @property bool                  Commit;
-@property DetailLevel DetailLevel;
+@property AvaTaxDetailLevel DetailLevel;
 
 //Use where appropriate to the situation
 @property NSString<Optional>*   CustomerUsageType;

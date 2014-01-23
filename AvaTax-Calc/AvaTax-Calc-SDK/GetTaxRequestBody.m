@@ -23,28 +23,28 @@
 
 - (void)setDetailLevelWithNSString:(NSString*)detailLevelString {
     if ([detailLevelString isEqualToString:@"Tax"]) {
-        self.DetailLevel = Tax;
+        self.DetailLevel = DetailLevel_Tax;
     } else if ([detailLevelString isEqualToString:@"Document"]) {
-        self.DetailLevel = Document;
+        self.DetailLevel = DetailLevel_Document;
     } else if ([detailLevelString isEqualToString:@"Line"]) {
-        self.DetailLevel = Line;
+        self.DetailLevel = DetailLevel_Line;
     } else if ([detailLevelString isEqualToString:@"Diagnostic"]) {
-        self.DetailLevel = Diagnostic;
+        self.DetailLevel = DetailLevel_Diagnostic;
     }
 }
 
 - (id)JSONObjectForDetailLevel {
     switch (self.DetailLevel) {
-        case Tax:
+        case DetailLevel_Tax:
             return @"Tax";
             break;
-        case Document:
+        case DetailLevel_Document:
             return @"Document";
             break;
-        case Line:
+        case DetailLevel_Line:
             return @"Line";
             break;
-        case Diagnostic:
+        case DetailLevel_Diagnostic:
             return @"Diagnostic";
             break;
         default:

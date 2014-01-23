@@ -60,7 +60,7 @@
 }
 
 - (void)validateAddress:(AvaTaxAddress*)address {
-    NSString *url = [NSString stringWithFormat:@"https://development.avalara.net/1.0/address/validate?Line1=%@&Line2=%@&City=%@&Region=%@&PostalCode=%@",address.Address1, address.Address2,address.City,address.State,address.Zip];
+    NSString *url = [NSString stringWithFormat:@"https://development.avalara.net/1.0/address/validate?Line1=%@&Line2=%@&Line3=%@&City=%@&Region=%@&PostalCode=%@",address.Line1, address.Line2, address.Line3, address.City,address.Region,address.PostalCode];
     url = [url stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
     ATWebCall* webCall = [[ATWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(validateAddressFinished:)];
