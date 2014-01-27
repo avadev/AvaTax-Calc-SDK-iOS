@@ -9,18 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "JSONModel.h"
 
-@class AvalaraAddress;
+@class AvaTaxAddress;
 @class AvalaraLine;
 @class RBTAvaTaxTaxOverride;
 
 typedef enum {
-    SalesOrder,
-    SalesInvoice,
-    ReturnOrder,
-    ReturnInvoice,
-    PurchaseOrder,
-    PurchaseInvoice
-} DocType;
+    DocType_SalesOrder,
+    DocType_SalesInvoice,
+    DocType_ReturnOrder,
+    DocType_ReturnInvoice,
+    DocType_PurchaseOrder,
+    DocType_PurchaseInvoice
+} AvaTaxDocType;
 typedef enum  {
     DetailLevel_Tax,
     DetailLevel_Document,
@@ -61,10 +61,10 @@ typedef enum {
 //Best Practice for tax calculation
 @property NSString<Optional>*   Client;
 @property NSString<Optional>*   DocCode;
-@property NSNumber<Optional>*   DocType;
+@property AvaTaxDocType         DocType;
 @property NSString<Optional>*   CompanyCode;
 @property bool                  Commit;
-@property AvaTaxDetailLevel DetailLevel;
+@property AvaTaxDetailLevel     DetailLevel;
 
 //Use where appropriate to the situation
 @property NSString<Optional>*   CustomerUsageType;
@@ -79,18 +79,6 @@ typedef enum {
 @property NSString<Optional>*   PosLaneCode;
 @property NSString<Optional>*   ReferenceCode;
 
-
-@end
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface AvalaraAddress : JSONModel
-
-@property NSString* AddressCode;
-@property NSString* Line1;
-@property NSString* Line2;
-@property NSString* City;
-@property NSString* Region;
-@property NSString* PostalCode;
 
 @end
 

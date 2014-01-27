@@ -13,8 +13,7 @@
 
 +(BOOL)propertyIsIgnored:(NSString*)propertyName {
     if ([propertyName isEqualToString:@"Commit"]
-        || [propertyName isEqualToString:@"Discount"]
-        || [propertyName isEqualToString:@"DocType"]) {
+        || [propertyName isEqualToString:@"Discount"]) {
         return YES;
     }
     
@@ -53,11 +52,48 @@
     }
 }
 
+- (void)setDocTypeNSString:(NSString*)docTypeString {
+    if ([docTypeString isEqualToString:@"SalesOrder"]) {
+        self.DocType = DocType_SalesOrder;
+    } else if ([docTypeString isEqualToString:@"SalesInvoice"]) {
+        self.DocType = DocType_SalesInvoice;
+    } else if ([docTypeString isEqualToString:@"ReturnOrder"]) {
+        self.DocType = DocType_ReturnOrder;
+    } else if ([docTypeString isEqualToString:@"ReturnInvoice"]) {
+        self.DocType = DocType_ReturnInvoice;
+    } else if ([docTypeString isEqualToString:@"PurchaseOrder"]) {
+        self.DocType = DocType_PurchaseOrder;
+    } else if ([docTypeString isEqualToString:@"PurchaseInvoice"]) {
+        self.DocType = DocType_PurchaseInvoice;
+    }
+}
 
-@end
+- (id)JSONObjectForDocType {
+    switch (self.DocType) {
+        case DocType_SalesOrder:
+            return @"SalesOrder";
+            break;
+        case DocType_SalesInvoice:
+            return @"SalesInvoice";
+            break;
+        case DocType_ReturnOrder:
+            return @"ReturnOrder";
+            break;
+        case DocType_ReturnInvoice:
+            return @"ReturnInvoice";
+            break;
+        case DocType_PurchaseOrder:
+            return @"PurchaseOrder";
+            break;
+        case DocType_SalesOrder:
+            return @"SalesOrder";
+            break;
+        default:
+            return nil;
+            break;
+    }
+}
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation AvalaraAddress
 
 @end
 
