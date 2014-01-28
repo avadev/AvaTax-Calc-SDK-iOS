@@ -9,7 +9,7 @@
 @class AvaTaxCalc;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface ATWebCall : NSObject < NSURLConnectionDelegate >
+@interface AvaTaxWebCall : NSObject < NSURLConnectionDelegate >
 {
     NSMutableURLRequest* _request;
     NSMutableData* _receivedData;

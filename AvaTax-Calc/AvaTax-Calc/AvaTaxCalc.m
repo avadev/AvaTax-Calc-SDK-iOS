@@ -8,11 +8,12 @@
 
 #import "AvaTaxCalc.h"
 #import "RBTBase64.h"
-#import "ATWebCall.h"
+#import "AvaTaxWebCall.h"
 #import "GetTaxRequestBody.h"
 #import "GetTaxResponseBody.h"
 #import "AvaTaxAddress.h"
 #import "AvaTaxValidateAddressResponse.h"
+#import "CancelTaxRequestBody.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc ()
@@ -46,12 +47,12 @@
 - (void)getTax:(GetTaxRequestBody*)postBody {
     NSString* url = @"https://development.avalara.net/1.0/tax/get/";
     
-    ATWebCall* webCall = [[ATWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxFinished:)];
+    AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxFinished:)];
     [webCall addAuthFrom:self];
     [webCall post:[postBody toJSONString]];
 }
 
-- (void)getTaxFinished:(ATWebCall*)webCall {
+- (void)getTaxFinished:(AvaTaxWebCall*)webCall {
     JSONModelError* error = nil;
     
     NSString* responseAsString = [webCall responseAsString];
@@ -63,18 +64,40 @@
     NSString *url = [NSString stringWithFormat:@"https://development.avalara.net/1.0/address/validate?Line1=%@&Line2=%@&Line3=%@&City=%@&Region=%@&PostalCode=%@",address.Line1, address.Line2, address.Line3, address.City,address.Region,address.PostalCode];
     url = [url stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
-    ATWebCall* webCall = [[ATWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(validateAddressFinished:)];
+    AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(validateAddressFinished:)];
     [webCall addAuthFrom:self];
     [webCall get];
     
 }
 
-- (void)validateAddressFinished:(ATWebCall*)webCall {
+- (void)validateAddressFinished:(AvaTaxWebCall*)webCall {
     JSONModelError* error = nil;
     
     NSString* responseAsString = [webCall responseAsString];
     AvaTaxValidateAddressResponse* response = [[AvaTaxValidateAddressResponse alloc] initWithString:responseAsString error:&error];
     NSLog(@"%@", response);
 }
+
+- (void)cancelTax:(CancelTaxRequestBody*)cancelBody {
+    // development
+    NSString* url = @"https://development.avalara.net/1.0/tax/cancel";
+    
+    // production
+    //NSString* url = @"https://avatax.avalara.net/1.0/tax/cancel";
+    
+    AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(cancelTaxFinished:)];
+    [webCall addAuthFrom:self];
+    [webCall post:[cancelBody toJSONString]];
+}
+
+- (void)cancelTaxFinished:(AvaTaxWebCall*)webCall {
+//    JSONModelError* error = nil;
+    
+    NSString* responseAsString = [webCall responseAsString];
+//    AvaTaxValidateAddressResponse* response = [[AvaTaxValidateAddressResponse alloc] initWithString:responseAsString error:&error];
+    NSLog(@"%@", responseAsString);
+}
+
+
 
 @end

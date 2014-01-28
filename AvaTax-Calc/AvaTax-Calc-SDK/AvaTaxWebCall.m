@@ -10,7 +10,7 @@ NSString* const HTTP_METHOD_GET = @"GET";
 NSString* const HTTP_METHOD_POST = @"POST";
 NSString* const HTTP_METHOD_DELETE = @"DELETE";
 
-#import "ATWebCall.h"
+#import "AvaTaxWebCall.h"
 #import "AvaTaxCalc.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -21,7 +21,7 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation ATWebCall
+@implementation AvaTaxWebCall
 
 - (id)initWithUrl:(NSString*)url callbackTarget:(id)target selector:(SEL)selector {
     self = [super init];
@@ -44,6 +44,7 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 
 - (void)get {
     NSURLConnection* connection = [[NSURLConnection alloc] initWithRequest:_request delegate:self];
+#pragma unused(connection)
 }
 
 - (void)post:(NSString*)body {
@@ -51,6 +52,8 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
     [_request setHTTPBody:[body dataUsingEncoding:NSUTF16StringEncoding]];
     
     NSURLConnection* connection = [[NSURLConnection alloc] initWithRequest:_request delegate:self];
+    
+#pragma unused(connection)
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -64,8 +67,12 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"%@", [self responseAsString]);
-    if ([_target respondsToSelector:_selector]) {
-        [_target performSelector:_selector withObject:self];
+    if (_target != nil && [_target respondsToSelector:_selector]) {
+        // avoiding warning "performSelector may cause a leak because its selector is unknown"
+        // http://stackoverflow.com/questions/7017281/performselector-may-cause-a-leak-because-its-selector-is-unknown
+        IMP imp = [_target methodForSelector:_selector];
+        void (*func)(id, SEL) = (void*)imp;
+        func(_target, _selector);
     }
 }
 

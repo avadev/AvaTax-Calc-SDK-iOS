@@ -9,6 +9,7 @@
 @class GetTaxRequestBody;
 @class GetTaxResponseBody;
 @class AvaTaxAddress;
+@class CancelTaxRequestBody;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol AvaTaxDelegate
@@ -31,5 +32,6 @@
 - (id)initWithDelegate:(NSObject<AvaTaxDelegate>*)delegate user:(NSString*)username password:(NSString *)password;
 - (void)getTax:(GetTaxRequestBody*)postBody;
 - (void)validateAddress:(AvaTaxAddress*)address;
+- (void)cancelTax:(CancelTaxRequestBody*)cancelBody;
 
 @end

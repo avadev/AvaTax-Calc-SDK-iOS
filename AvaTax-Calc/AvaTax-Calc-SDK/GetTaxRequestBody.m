@@ -85,8 +85,8 @@
         case DocType_PurchaseOrder:
             return @"PurchaseOrder";
             break;
-        case DocType_SalesOrder:
-            return @"SalesOrder";
+        case DocType_PurchaseInvoice:
+            return @"PurchaseInvoice";
             break;
         default:
             return nil;
