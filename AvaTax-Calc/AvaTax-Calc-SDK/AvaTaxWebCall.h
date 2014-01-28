@@ -16,7 +16,11 @@
     
     id _target;
     SEL _selector;
+    
+    id _userObject;
 }
+
+@property id userObject;    // a place to store an object that the creator of this web call may want to utilize when this webcall returns
 
 - (id)initWithUrl:(NSString*)url callbackTarget:(id)target selector:(SEL)selector;
 - (void)addAuthFrom:(AvaTaxCalc*)avaTaxInterface;

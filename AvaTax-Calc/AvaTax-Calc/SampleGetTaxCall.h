@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AvaTaxCalc.h"
 
-@interface SampleGetTaxCall : NSObject < NSURLConnectionDelegate, AvaTaxDelegate >
+@interface SampleGetTaxCall : NSObject < NSURLConnectionDelegate, AvaTaxGetTaxDelegate, AvaTaxValidateAddressDelegate, AvaTaxCancelTaxDelegate >
 {
     NSMutableData* receivedData;
 }

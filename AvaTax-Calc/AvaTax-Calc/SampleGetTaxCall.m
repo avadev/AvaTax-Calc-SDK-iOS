@@ -29,9 +29,9 @@
     NSString* username = @"rob.busack";
     NSString* password = @"";
     
-    AvaTaxCalc* avaTaxInterface = [[AvaTaxCalc alloc] initWithDelegate:self user:username password:password];
+    AvaTaxCalc* avaTaxInterface = [[AvaTaxCalc alloc] initWithUser:username password:password];
     
-    [avaTaxInterface getTax:[self samplePostJson]];
+    [avaTaxInterface getTax:[self samplePostJson] callback:self];
     
     
     AvaTaxAddress* address = [[AvaTaxAddress alloc] init];
@@ -40,11 +40,18 @@
     address.City = @"Seattle";
     address.State = @"WA";
     address.PostalCode = @"98119";
-    [avaTaxInterface validateAddress:address];
+    [avaTaxInterface validateAddress:address callback:self];
 }
 
 - (void)getTaxFinished:(GetTaxResponseBody*)response {
     
+}
+
+- (void)validateAddressFinished:(AvaTaxValidateAddressResponse *)response {
+    
+}
+
+- (void)cancelTaxFinished:(AvaTaxCancelTaxResponse*)response {
 }
 
 @end

@@ -9,12 +9,28 @@
 @class GetTaxRequestBody;
 @class GetTaxResponseBody;
 @class AvaTaxAddress;
+@class AvaTaxValidateAddressResponse;
 @class CancelTaxRequestBody;
+@class AvaTaxCancelTaxResponse;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@protocol AvaTaxDelegate
+@protocol AvaTaxGetTaxDelegate
 
 - (void)getTaxFinished:(GetTaxResponseBody*)response;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol AvaTaxValidateAddressDelegate
+
+- (void)validateAddressFinished:(AvaTaxValidateAddressResponse*)response;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol AvaTaxCancelTaxDelegate
+
+- (void)cancelTaxFinished:(AvaTaxCancelTaxResponse*)response;
 
 @end
 
@@ -23,15 +39,13 @@
 {
     NSString* _username;
     NSString* _encodedLoginData;
-    
-    NSObject<AvaTaxDelegate>* _delegate;
 }
 
 @property (readonly) NSString* username;
 
-- (id)initWithDelegate:(NSObject<AvaTaxDelegate>*)delegate user:(NSString*)username password:(NSString *)password;
-- (void)getTax:(GetTaxRequestBody*)postBody;
-- (void)validateAddress:(AvaTaxAddress*)address;
-- (void)cancelTax:(CancelTaxRequestBody*)cancelBody;
+- (id)initWithUser:(NSString*)username password:(NSString *)password;
+- (void)getTax:(GetTaxRequestBody*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
+- (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
+- (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
 
 @end

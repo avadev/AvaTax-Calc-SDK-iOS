@@ -23,6 +23,8 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxWebCall
 
+@synthesize userObject = _userObject;
+
 - (id)initWithUrl:(NSString*)url callbackTarget:(id)target selector:(SEL)selector {
     self = [super init];
     if (self) {
