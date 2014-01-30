@@ -29,10 +29,11 @@
 @synthesize username = _username;
 @synthesize encodedLoginData = _encodedLoginData;
 
-- (id)initWithUser:(NSString*)username password:(NSString *)password {
+- (id)initWithUser:(NSString*)username password:(NSString *)password development:(BOOL)devServersNotProd {
     self = [super init];
     if (self) {
         [self setUsername:username password:password];
+        _useDevServer = devServersNotProd;
     }
     return self;
 }
@@ -44,8 +45,16 @@
     _encodedLoginData = [RBTBase64 encode:[loginString dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
+- (NSString*)hostName {
+    if (_useDevServer) {
+        return @"development.avalara.net";
+    } else {
+        return @"avatax.avalara.net";
+    }
+}
+
 - (void)getTax:(GetTaxRequestBody*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback {
-    NSString* url = @"https://development.avalara.net/1.0/tax/get/";
+    NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/get/", [self hostName]];
     
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxFinished:)];
     webCall.userObject = callback;
@@ -63,7 +72,7 @@
 }
 
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback {
-    NSString *url = [NSString stringWithFormat:@"https://development.avalara.net/1.0/address/validate?Line1=%@&Line2=%@&Line3=%@&City=%@&Region=%@&PostalCode=%@",address.Line1, address.Line2, address.Line3, address.City,address.Region,address.PostalCode];
+    NSString *url = [NSString stringWithFormat:@"https://%@/1.0/address/validate?Line1=%@&Line2=%@&Line3=%@&City=%@&Region=%@&PostalCode=%@", [self hostName], address.Line1, address.Line2, address.Line3, address.City,address.Region,address.PostalCode];
     url = [url stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(validateAddressFinished:)];
@@ -83,11 +92,7 @@
 }
 
 - (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback {
-    // development
-    NSString* url = @"https://development.avalara.net/1.0/tax/cancel";
-    
-    // production
-    //NSString* url = @"https://avatax.avalara.net/1.0/tax/cancel";
+    NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/cancel", [self hostName]];
     
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(cancelTaxFinished:)];
     webCall.userObject = callback;

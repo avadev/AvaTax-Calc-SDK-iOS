@@ -39,11 +39,13 @@
 {
     NSString* _username;
     NSString* _encodedLoginData;
+    
+    BOOL _useDevServer;
 }
 
 @property (readonly) NSString* username;
 
-- (id)initWithUser:(NSString*)username password:(NSString *)password;
+- (id)initWithUser:(NSString*)username password:(NSString *)password development:(BOOL)devServersNotProd;
 - (void)getTax:(GetTaxRequestBody*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
 - (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
