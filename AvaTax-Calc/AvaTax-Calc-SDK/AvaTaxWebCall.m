@@ -70,11 +70,13 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"%@", [self responseAsString]);
     if (_target != nil && [_target respondsToSelector:_selector]) {
+        [_target performSelector:_selector];
+        
         // avoiding warning "performSelector may cause a leak because its selector is unknown"
         // http://stackoverflow.com/questions/7017281/performselector-may-cause-a-leak-because-its-selector-is-unknown
-        IMP imp = [_target methodForSelector:_selector];
-        void (*func)(id, SEL) = (void*)imp;
-        func(_target, _selector);
+//        IMP imp = [_target methodForSelector:_selector];
+//        void (*func)(id, SEL) = (void*)imp;
+//        func(_target, _selector);
     }
 }
 
