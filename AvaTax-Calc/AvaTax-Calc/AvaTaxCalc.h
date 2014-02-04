@@ -12,6 +12,8 @@
 @class AvaTaxValidateAddressResponse;
 @class CancelTaxRequestBody;
 @class AvaTaxCancelTaxResponse;
+@class TaxSummaryRequestBody;
+@class TaxSummaryResponse;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol AvaTaxGetTaxDelegate
@@ -35,6 +37,13 @@
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol AvaTaxTaxSummaryDelegate
+
+- (void)getTaxSummaryFinished:(TaxSummaryResponse*)response;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc : NSObject
 {
     NSString* _username;
@@ -49,5 +58,6 @@
 - (void)getTax:(GetTaxRequestBody*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
 - (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
+- (void)getTaxSummary:(TaxSummaryRequestBody*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback;
 
 @end

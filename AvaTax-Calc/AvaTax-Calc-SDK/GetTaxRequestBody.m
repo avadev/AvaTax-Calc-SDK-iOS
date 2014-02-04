@@ -20,6 +20,14 @@
     return [super propertyIsIgnored:propertyName];
 }
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    if ([propertyName isEqualToString:@"DocType"]) {
+        return YES;
+    }
+    
+    return [super propertyIsOptional:propertyName];
+}
+
 - (void)setDetailLevelWithNSString:(NSString*)detailLevelString {
     if ([detailLevelString isEqualToString:@"Tax"]) {
         self.DetailLevel = DetailLevel_Tax;

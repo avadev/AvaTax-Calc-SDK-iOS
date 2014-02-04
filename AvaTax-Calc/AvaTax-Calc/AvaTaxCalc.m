@@ -15,6 +15,7 @@
 #import "AvaTaxValidateAddressResponse.h"
 #import "CancelTaxRequestBody.h"
 #import "AvaTaxCancelTaxResponse.h"
+#import "TaxSummaryResponse.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc ()
@@ -109,6 +110,20 @@
     [callback cancelTaxFinished:response];
 }
 
+- (void)getTaxSummary:(TaxSummaryRequestBody*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback {
+    
+    NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/taxsummary", [self hostName]];
+    
+    AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxSummaryFinished:)];
+}
+
+- (void)getTaxSummaryFinished:(AvaTaxWebCall*)webCall {
+    JSONModelError* error = nil;
+    NSString* responseAsString = [webCall responseAsString];
+    TaxSummaryResponse* response = [[TaxSummaryResponse alloc] initWithString:responseAsString error:&error];
+    NSObject<AvaTaxTaxSummaryDelegate>* callback = webCall.userObject;
+    [callback getTaxSummaryFinished:response];
+}
 
 
 @end
