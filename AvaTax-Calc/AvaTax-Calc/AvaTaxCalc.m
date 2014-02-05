@@ -115,6 +115,9 @@
     NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/taxsummary", [self hostName]];
     
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxSummaryFinished:)];
+    webCall.userObject = callback;
+    [webCall addAuthFrom:self];
+    [webCall post:taxSummaryRequest];
 }
 
 - (void)getTaxSummaryFinished:(AvaTaxWebCall*)webCall {
