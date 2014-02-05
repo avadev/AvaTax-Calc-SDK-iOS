@@ -15,7 +15,9 @@
 #import "AvaTaxValidateAddressResponse.h"
 #import "CancelTaxRequestBody.h"
 #import "AvaTaxCancelTaxResponse.h"
+#import "TaxSummaryRequestBody.h"
 #import "TaxSummaryResponse.h"
+#import "AvaTaxEstimateTaxResponse.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc ()
@@ -117,7 +119,7 @@
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxSummaryFinished:)];
     webCall.userObject = callback;
     [webCall addAuthFrom:self];
-    [webCall post:taxSummaryRequest];
+    [webCall post:[taxSummaryRequest toJSONString]];
 }
 
 - (void)getTaxSummaryFinished:(AvaTaxWebCall*)webCall {
@@ -128,5 +130,21 @@
     [callback getTaxSummaryFinished:response];
 }
 
+- (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback {
+    NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/%f,%f/get?%f", [self hostName], latitude, longitude, saleAmount];
+    
+    AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(estimateTaxDidFinish:)];
+    webCall.userObject = callback;
+    [webCall addAuthFrom:self];
+    [webCall get];
+}
+
+- (void)estimateTaxFinished:(AvaTaxWebCall*)webCall {
+    JSONModelError* error = nil;
+    NSString* responseAsString = [webCall responseAsString];
+    AvaTaxEstimateTaxResponse* response = [[AvaTaxEstimateTaxResponse alloc] initWithString:responseAsString error:&error];
+    NSObject<AvaTaxEstimateTaxDelegate>* callback = webCall.userObject;
+    [callback estimateTaxFinished:response];
+}
 
 @end

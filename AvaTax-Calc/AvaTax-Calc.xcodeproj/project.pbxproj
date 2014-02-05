@@ -14,6 +14,7 @@
 		D4337FA5189842C8004B19BB /* AvaTaxCancelTaxResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FA4189842C8004B19BB /* AvaTaxCancelTaxResponse.m */; };
 		D4337FA818A18B06004B19BB /* TaxSummaryRequestBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FA718A18B06004B19BB /* TaxSummaryRequestBody.m */; };
 		D4337FAB18A18BC6004B19BB /* TaxSummaryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FAA18A18BC6004B19BB /* TaxSummaryResponse.m */; };
+		D4337FAE18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FAD18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m */; };
 		D4865FF518887DDC005F9F6C /* AvaTaxAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */; };
 		D498272E185FA78100807C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
 		D4982730185FA78100807C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272F185FA78100807C24 /* CoreGraphics.framework */; };
@@ -79,6 +80,8 @@
 		D4337FA718A18B06004B19BB /* TaxSummaryRequestBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxSummaryRequestBody.m; sourceTree = "<group>"; };
 		D4337FA918A18BC6004B19BB /* TaxSummaryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxSummaryResponse.h; sourceTree = "<group>"; };
 		D4337FAA18A18BC6004B19BB /* TaxSummaryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxSummaryResponse.m; sourceTree = "<group>"; };
+		D4337FAC18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxEstimateTaxResponse.h; sourceTree = "<group>"; };
+		D4337FAD18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxEstimateTaxResponse.m; sourceTree = "<group>"; };
 		D4865FF318887DDC005F9F6C /* AvaTaxAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxAddress.h; sourceTree = "<group>"; };
 		D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxAddress.m; sourceTree = "<group>"; };
 		D498272A185FA78100807C24 /* AvaTax-Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AvaTax-Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +270,8 @@
 				D4337FA718A18B06004B19BB /* TaxSummaryRequestBody.m */,
 				D4337FA918A18BC6004B19BB /* TaxSummaryResponse.h */,
 				D4337FAA18A18BC6004B19BB /* TaxSummaryResponse.m */,
+				D4337FAC18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.h */,
+				D4337FAD18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m */,
 			);
 			path = "AvaTax-Calc-SDK";
 			sourceTree = "<group>";
@@ -497,6 +502,7 @@
 				D4337FA818A18B06004B19BB /* TaxSummaryRequestBody.m in Sources */,
 				D4337FAB18A18BC6004B19BB /* TaxSummaryResponse.m in Sources */,
 				D4C425DB187747C50030EF00 /* JSONAPI.m in Sources */,
+				D4337FAE18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m in Sources */,
 				D4C425DF187747C50030EF00 /* JSONValueTransformer.m in Sources */,
 				D4337FA5189842C8004B19BB /* AvaTaxCancelTaxResponse.m in Sources */,
 				D4C425DC187747C50030EF00 /* JSONHTTPClient.m in Sources */,

@@ -14,6 +14,7 @@
 @class AvaTaxCancelTaxResponse;
 @class TaxSummaryRequestBody;
 @class TaxSummaryResponse;
+@class AvaTaxEstimateTaxResponse;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol AvaTaxGetTaxDelegate
@@ -44,6 +45,13 @@
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol AvaTaxEstimateTaxDelegate
+
+- (void)estimateTaxFinished:(AvaTaxEstimateTaxResponse*)response;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc : NSObject
 {
     NSString* _username;
@@ -59,5 +67,6 @@
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
 - (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
 - (void)getTaxSummary:(TaxSummaryRequestBody*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback;
+- (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback;
 
 @end
