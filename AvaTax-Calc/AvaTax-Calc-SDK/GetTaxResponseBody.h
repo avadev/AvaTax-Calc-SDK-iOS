@@ -11,15 +11,16 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface GetTaxResponseBody : AvaTaxResponse
 
-@property NSString<Optional>* DocCode;
-@property NSString<Optional>* DocDate;  // TODO: see if we can use an NSDate object
-@property NSString<Optional>* Timestamp;
-@property NSString<Optional>* TotalAmount;  // TODO:  get these to be floats
-@property NSString<Optional>* TotalDiscount;
-@property NSString<Optional>* TotalExemption;
-@property NSString<Optional>* TotalTaxable;
-@property NSString<Optional>* TotalTax;
-@property NSString<Optional>* TotalTaxCalculated;
-@property NSString<Optional>* TaxDate;
+@property NSString<Optional>*   DocCode;
+@property NSDate<Optional>*     DocDate;
+@property NSDate<Optional>*     Timestamp;
+@property float                 TotalAmount;
+@property float                 TotalDiscount;
+@property float                 TotalExemption;
+@property float                 TotalTaxable;
+@property float                 TotalTax;
+@property float                 TotalTaxCalculated;
+@property NSArray<Optional>*    TaxLines;
+@property NSDate<Optional>*     TaxDate;
 
 @end
