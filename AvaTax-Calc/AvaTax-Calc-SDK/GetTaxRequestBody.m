@@ -8,6 +8,8 @@
 
 #import "GetTaxRequestBody.h"
 
+NSString* const AVA_TAX_DOC_DATE_FORMAT = @"yyyy-MM-dd";
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation GetTaxRequestBody
 
@@ -100,6 +102,24 @@
             return nil;
             break;
     }
+}
+
+// example format: "2013-06-01"
+- (void)setDocDateWithNSString:(NSString*)docDateString {
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
+    self.DocDate = [dateFormatter dateFromString:docDateString];
+}
+
+- (id)JSONObjectForDocDate {
+    if (self.DocDate == nil) {
+        return nil;
+    }
+    
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    return [dateFormatter stringFromDate:self.DocDate];
 }
 
 

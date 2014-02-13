@@ -13,6 +13,8 @@
 @class AvalaraLine;
 @class RBTAvaTaxTaxOverride;
 
+extern NSString* const AVA_TAX_DOC_DATE_FORMAT;
+
 typedef enum {
     DocType_SalesOrder,
     DocType_SalesInvoice,
@@ -53,10 +55,10 @@ typedef enum {
 }
 
 // Required for Tax Calculation
-@property NSString* DocDate;
+@property NSDate*   DocDate;
 @property NSString* CustomerCode;
-@property NSArray*  Addresses;
-@property NSArray*  Lines;
+@property NSArray*  Addresses;  // at least one required
+@property NSArray*  Lines;      // at least one required
 
 //Best Practice for tax calculation
 @property NSString<Optional>*   Client;
@@ -67,9 +69,9 @@ typedef enum {
 @property AvaTaxDetailLevel     DetailLevel;
 
 //Use where appropriate to the situation
-@property NSString<Optional>*   CustomerUsageType;
+@property NSString<Optional>*   CustomerUsageType;  // TODO: do we want to use an enum for this?
 @property NSString<Optional>*   ExemptionNo;
-@property int                   Discount;
+@property float                 Discount;
 @property NSString<Optional>*   BusinessIdentificationNo;
 @property RBTAvaTaxTaxOverride<Optional>*   TaxOverride;
 

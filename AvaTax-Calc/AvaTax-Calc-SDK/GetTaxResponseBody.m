@@ -7,8 +7,8 @@
 //
 
 #import "GetTaxResponseBody.h"
+#import "GetTaxRequestBody.h"
 
-static NSString* const AVA_TAX_DOC_DATE_FORMAT = @"yyyy-MM-dd";
 static NSString* const AVA_TAX_TIMESTAMP_FORMAT = @"yyyy-MM-dd'T'HH:mm:ssZ";
 static NSString* const AVA_TAX_TAX_DATE_FORMAT = @"yyyy-MM-dd";
 
