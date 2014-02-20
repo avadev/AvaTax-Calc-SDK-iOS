@@ -10,6 +10,7 @@
 #import "AvaTaxCalc.h"
 #import "GetTaxRequestBody.h"
 #import "AvaTaxAddress.h"
+#import "TestUserCredentials.h"
 
 @implementation SampleGetTaxCall
 
@@ -26,8 +27,8 @@
 }
 
 - (void)performGetTaxRequest {
-    NSString* username = @"rob.busack";
-    NSString* password = @"";
+    NSString* username = TEST_USERNAME;
+    NSString* password = TEST_PASSWORD;
     
     AvaTaxCalc* avaTaxInterface = [[AvaTaxCalc alloc] initWithUser:username password:password development:YES];
     
@@ -41,6 +42,8 @@
     address.State = @"WA";
     address.PostalCode = @"98119";
     [avaTaxInterface validateAddress:address callback:self];
+    
+    
 }
 
 - (void)getTaxFinished:(GetTaxResponseBody*)response {

@@ -15,6 +15,9 @@
 		D4337FA818A18B06004B19BB /* TaxSummaryRequestBody.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FA718A18B06004B19BB /* TaxSummaryRequestBody.m */; };
 		D4337FAB18A18BC6004B19BB /* TaxSummaryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FAA18A18BC6004B19BB /* TaxSummaryResponse.m */; };
 		D4337FAE18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FAD18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m */; };
+		D4337FC918B58B4C004B19BB /* AddressValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FC818B58B4C004B19BB /* AddressValidationTests.m */; };
+		D4337FCC18B58E7F004B19BB /* TestUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FCB18B58E7F004B19BB /* TestUserCredentials.m */; };
+		D4337FCD18B58E7F004B19BB /* TestUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FCB18B58E7F004B19BB /* TestUserCredentials.m */; };
 		D4865FF518887DDC005F9F6C /* AvaTaxAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */; };
 		D498272E185FA78100807C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
 		D4982730185FA78100807C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272F185FA78100807C24 /* CoreGraphics.framework */; };
@@ -82,6 +85,10 @@
 		D4337FAA18A18BC6004B19BB /* TaxSummaryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxSummaryResponse.m; sourceTree = "<group>"; };
 		D4337FAC18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxEstimateTaxResponse.h; sourceTree = "<group>"; };
 		D4337FAD18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxEstimateTaxResponse.m; sourceTree = "<group>"; };
+		D4337FC718B58B4C004B19BB /* AddressValidationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressValidationTests.h; sourceTree = "<group>"; };
+		D4337FC818B58B4C004B19BB /* AddressValidationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressValidationTests.m; sourceTree = "<group>"; };
+		D4337FCA18B58E7E004B19BB /* TestUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUserCredentials.h; sourceTree = "<group>"; };
+		D4337FCB18B58E7F004B19BB /* TestUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUserCredentials.m; sourceTree = "<group>"; };
 		D4865FF318887DDC005F9F6C /* AvaTaxAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxAddress.h; sourceTree = "<group>"; };
 		D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxAddress.m; sourceTree = "<group>"; };
 		D498272A185FA78100807C24 /* AvaTax-Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AvaTax-Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +232,8 @@
 				D4982734185FA78100807C24 /* Supporting Files */,
 				D4982783185FC11500807C24 /* SampleGetTaxCall.h */,
 				D4982784185FC11500807C24 /* SampleGetTaxCall.m */,
+				D4337FCA18B58E7E004B19BB /* TestUserCredentials.h */,
+				D4337FCB18B58E7F004B19BB /* TestUserCredentials.m */,
 			);
 			path = "AvaTax-Calc";
 			sourceTree = "<group>";
@@ -351,6 +360,8 @@
 				D4C4261D187771FF0030EF00 /* JSONModelTests.h */,
 				D4C4261E187771FF0030EF00 /* JSONModelTests.m */,
 				D4C425F218775FD20030EF00 /* Supporting Files */,
+				D4337FC718B58B4C004B19BB /* AddressValidationTests.h */,
+				D4337FC818B58B4C004B19BB /* AddressValidationTests.m */,
 			);
 			path = "AvaTax-Calc-SDK-GHUnitTests";
 			sourceTree = "<group>";
@@ -474,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D498273E185FA78100807C24 /* AppDelegate.m in Sources */,
+				D4337FCC18B58E7F004B19BB /* TestUserCredentials.m in Sources */,
 				D4982785185FC11500807C24 /* SampleGetTaxCall.m in Sources */,
 				D498273A185FA78100807C24 /* main.m in Sources */,
 			);
@@ -514,6 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4337FC918B58B4C004B19BB /* AddressValidationTests.m in Sources */,
+				D4337FCD18B58E7F004B19BB /* TestUserCredentials.m in Sources */,
 				D4C425F818775FD20030EF00 /* main.m in Sources */,
 				D4C4261F187771FF0030EF00 /* JSONModelTests.m in Sources */,
 			);
