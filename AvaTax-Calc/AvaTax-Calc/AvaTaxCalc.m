@@ -9,7 +9,7 @@
 #import "AvaTaxCalc.h"
 #import "RBTBase64.h"
 #import "AvaTaxWebCall.h"
-#import "GetTaxRequestBody.h"
+#import "AvaTaxGetTaxRequest.h"
 #import "GetTaxResponseBody.h"
 #import "AvaTaxAddress.h"
 #import "AvaTaxValidateAddressResponse.h"
@@ -56,7 +56,7 @@
     }
 }
 
-- (void)getTax:(GetTaxRequestBody*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback {
+- (void)getTax:(AvaTaxGetTaxRequest*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback {
     NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/get/", [self hostName]];
     
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(getTaxFinished:)];

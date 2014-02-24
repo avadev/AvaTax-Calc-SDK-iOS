@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Avalara. All rights reserved.
 //
 
-@class GetTaxRequestBody;
+@class AvaTaxGetTaxRequest;
 @class GetTaxResponseBody;
 @class AvaTaxAddress;
 @class AvaTaxValidateAddressResponse;
@@ -63,7 +63,7 @@
 @property (readonly) NSString* username;
 
 - (id)initWithUser:(NSString*)username password:(NSString *)password development:(BOOL)devServersNotProd;
-- (void)getTax:(GetTaxRequestBody*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
+- (void)getTax:(AvaTaxGetTaxRequest*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
 - (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
 - (void)getTaxSummary:(TaxSummaryRequestBody*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback;

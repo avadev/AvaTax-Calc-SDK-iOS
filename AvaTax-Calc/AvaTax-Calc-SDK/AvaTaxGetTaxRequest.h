@@ -1,5 +1,5 @@
 //
-//  GetTaxRequestBody.h
+//  AvaTaxGetTaxRequest.h
 //  AvaTax-Calc
 //
 //  Created by Rob Busack on 1/3/14.
@@ -49,7 +49,7 @@ typedef enum {
 } SystemCustomerUsageType;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface GetTaxRequestBody : JSONModel
+@interface AvaTaxGetTaxRequest : JSONModel
 {
     
 }

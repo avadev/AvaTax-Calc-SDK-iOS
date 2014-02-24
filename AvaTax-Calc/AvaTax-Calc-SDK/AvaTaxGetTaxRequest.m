@@ -1,17 +1,17 @@
 //
-//  GetTaxRequestBody.m
+//  AvaTaxGetTaxRequest.m
 //  AvaTax-Calc
 //
 //  Created by Rob Busack on 1/3/14.
 //  Copyright (c) 2014 Avalara. All rights reserved.
 //
 
-#import "GetTaxRequestBody.h"
+#import "AvaTaxGetTaxRequest.h"
 
 NSString* const AVA_TAX_DOC_DATE_FORMAT = @"yyyy-MM-dd";
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation GetTaxRequestBody
+@implementation AvaTaxGetTaxRequest
 
 +(BOOL)propertyIsIgnored:(NSString*)propertyName {
     if ([propertyName isEqualToString:@"Commit"]

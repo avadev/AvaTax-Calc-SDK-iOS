@@ -8,20 +8,20 @@
 
 #import "SampleGetTaxCall.h"
 #import "AvaTaxCalc.h"
-#import "GetTaxRequestBody.h"
+#import "AvaTaxGetTaxRequest.h"
 #import "AvaTaxAddress.h"
 #import "TestUserCredentials.h"
 
 @implementation SampleGetTaxCall
 
-- (GetTaxRequestBody*)samplePostJson {
+- (AvaTaxGetTaxRequest*)samplePostJson {
     
     //NSString* json = @"{ 'DocDate': '2013-05-13', 'CustomerCode': 'CUST1', 'DetailLevel':'Document', 'Addresses':[ { 'AddressCode': '1', 'Line1': '100 Ravine Ln', 'Line2': '', 'City': 'Bainbridge Island', 'Region': 'WA', 'PostalCode': '98110' }], 'Lines':[ { 'LineNo': '1', 'DestinationCode': '1', 'OriginCode': '1', 'Qty': 1, 'Amount': 100 }] }";
     
     NSString* json = @"{ \"DocDate\": \"2013-05-13\", \"CustomerCode\": \"CUST1\", \"DetailLevel\":\"Document\", \"Addresses\":[ { \"AddressCode\": \"1\", \"Line1\": \"100 Ravine Ln\", \"Line2\": \"\", \"City\": \"Bainbridge Island\", \"Region\": \"WA\", \"PostalCode\": \"98110\" }], \"Lines\":[ { \"LineNo\": \"1\", \"DestinationCode\": \"1\", \"OriginCode\": \"1\", \"Qty\": 1, \"Amount\": 100 }] }";
     
     JSONModelError* error = nil;
-    GetTaxRequestBody* jsonObject = [[GetTaxRequestBody alloc] initWithString:json error:&error];
+    AvaTaxGetTaxRequest* jsonObject = [[AvaTaxGetTaxRequest alloc] initWithString:json error:&error];
     
     return jsonObject;
 }
