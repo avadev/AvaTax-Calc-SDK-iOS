@@ -8,7 +8,7 @@
 
 #import <GHUnitIOS/GHUnit.h>
 
-@interface AddressValidationTests : GHTestCase
+@interface AddressValidationTests : GHAsyncTestCase
 {
 
 }

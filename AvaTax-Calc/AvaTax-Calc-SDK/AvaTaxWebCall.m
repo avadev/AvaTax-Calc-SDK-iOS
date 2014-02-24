@@ -80,6 +80,10 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
     }
 }
 
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"%@", error);
+}
+
 - (NSString*) responseAsString {
 	NSString *responseAsString = [[NSString alloc] initWithData:_receivedData encoding:NSUTF8StringEncoding];
 	return responseAsString;

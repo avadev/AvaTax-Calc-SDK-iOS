@@ -14,27 +14,43 @@
 
 @interface AddressValidationTestRunner : NSObject < AvaTaxValidateAddressDelegate >
 {
-    void (^_responseHandler)(AvaTaxValidateAddressResponse*);
+    GHAsyncTestCase* _testCase;
+//    void (^_responseHandler)(AvaTaxValidateAddressResponse*);
+    AvaTaxValidateAddressResponse* _reponse;
 }
 
-@property (nonatomic,copy) void(^responseHandler)(AvaTaxValidateAddressResponse*);
+@property (nonatomic,retain) GHAsyncTestCase* testCase;
+//@property (nonatomic,copy) void(^responseHandler)(AvaTaxValidateAddressResponse*);
+@property (nonatomic,retain) AvaTaxValidateAddressResponse* response;
 
-+ (void)testAddressValidationFor:(AvaTaxAddress*)address responseHandler:(void(^)(AvaTaxValidateAddressResponse*))responseHandler;
++ (void)testAddressValidationFor:(AvaTaxAddress*)address testCase:(GHAsyncTestCase*)testCase responseHandler:(void(^)(AvaTaxValidateAddressResponse*))responseHandler;
 - (void)validateAddressFinished:(AvaTaxValidateAddressResponse*)response;
 
 @end
 
 @implementation AddressValidationTestRunner
 
-+ (void)testAddressValidationFor:(AvaTaxAddress*)address responseHandler:(void(^)(AvaTaxValidateAddressResponse*))responseHandler {
+//@synthesize responseHandler = _reponseHandler;
+@synthesize testCase = _testCase;
+@synthesize response = _response;
+
++ (void)testAddressValidationFor:(AvaTaxAddress*)address testCase:(GHAsyncTestCase*)testCase responseHandler:(void(^)(AvaTaxValidateAddressResponse*))responseHandler {
+    [testCase prepare]; // tell GHUnit to get ready for something asynchronous to happen
+    
     AddressValidationTestRunner* runner = [[AddressValidationTestRunner alloc] init];
-    runner.responseHandler = responseHandler;
+    runner.testCase = testCase;
+//    runner.responseHandler = responseHandler;
     AvaTaxCalc* calc = [[AvaTaxCalc alloc] initWithUser:TEST_USERNAME password:TEST_PASSWORD development:YES];
     [calc validateAddress:address callback:runner];
+    
+    [testCase waitForStatus:kGHUnitWaitStatusSuccess timeout:4.0];
+    
+    responseHandler(runner.response);
 }
 
 - (void)validateAddressFinished:(AvaTaxValidateAddressResponse*)response {
-    _responseHandler(response);
+    self.response = response;
+    [self.testCase notify:kGHUnitWaitStatusSuccess forSelector:NULL];
 }
 
 @end
@@ -49,8 +65,8 @@
     address.Region = @"WI";
     address.PostalCode = @"98144-2328";
     
-    [AddressValidationTestRunner testAddressValidationFor:address responseHandler:^(AvaTaxValidateAddressResponse* response){
-        GHAssertTrue([response.ResultCode isEqualToString:@"201"], @"Result code 200");
+    [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
+        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"Result code 200");
     }];
 }
 
