@@ -1,5 +1,5 @@
 //
-//  TaxSummaryRequestBody.h
+//  AvaTaxTaxSummaryRequest.h
 //  AvaTax-Calc
 //
 //  Created by Rob Busack on 2/4/14.
@@ -9,7 +9,7 @@
 #import "JSONModel.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TaxSummaryRequestBody : JSONModel
+@interface AvaTaxTaxSummaryRequest : JSONModel
 
 @property NSString* MerchantCode;
 @property NSString* StartDate;

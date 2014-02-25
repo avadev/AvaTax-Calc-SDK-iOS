@@ -15,8 +15,8 @@
 #import "AvaTaxValidateAddressResponse.h"
 #import "AvaTaxCancelTaxRequest.h"
 #import "AvaTaxCancelTaxResponse.h"
-#import "TaxSummaryRequestBody.h"
-#import "TaxSummaryResponse.h"
+#import "AvaTaxTaxSummaryRequest.h"
+#import "AvaTaxTaxSummaryResponse.h"
 #import "AvaTaxEstimateTaxResponse.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -112,7 +112,7 @@
     [callback cancelTaxFinished:response];
 }
 
-- (void)getTaxSummary:(TaxSummaryRequestBody*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback {
+- (void)getTaxSummary:(AvaTaxTaxSummaryRequest*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback {
     
     NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/taxsummary", [self hostName]];
     
@@ -125,7 +125,7 @@
 - (void)getTaxSummaryFinished:(AvaTaxWebCall*)webCall {
     JSONModelError* error = nil;
     NSString* responseAsString = [webCall responseAsString];
-    TaxSummaryResponse* response = [[TaxSummaryResponse alloc] initWithString:responseAsString error:&error];
+    AvaTaxTaxSummaryResponse* response = [[AvaTaxTaxSummaryResponse alloc] initWithString:responseAsString error:&error];
     NSObject<AvaTaxTaxSummaryDelegate>* callback = webCall.userObject;
     [callback getTaxSummaryFinished:response];
 }

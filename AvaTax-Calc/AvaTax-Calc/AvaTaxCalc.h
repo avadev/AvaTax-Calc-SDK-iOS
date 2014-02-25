@@ -12,8 +12,8 @@
 @class AvaTaxValidateAddressResponse;
 @class AvaTaxCancelTaxRequest;
 @class AvaTaxCancelTaxResponse;
-@class TaxSummaryRequestBody;
-@class TaxSummaryResponse;
+@class AvaTaxTaxSummaryRequest;
+@class AvaTaxTaxSummaryResponse;
 @class AvaTaxEstimateTaxResponse;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,7 +40,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol AvaTaxTaxSummaryDelegate
 
-- (void)getTaxSummaryFinished:(TaxSummaryResponse*)response;
+- (void)getTaxSummaryFinished:(AvaTaxTaxSummaryResponse*)response;
 
 @end
 
@@ -66,7 +66,7 @@
 - (void)getTax:(AvaTaxGetTaxRequest*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
 - (void)cancelTax:(AvaTaxCancelTaxRequest*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
-- (void)getTaxSummary:(TaxSummaryRequestBody*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback;
+- (void)getTaxSummary:(AvaTaxTaxSummaryRequest*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback;
 - (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback;
 
 @end

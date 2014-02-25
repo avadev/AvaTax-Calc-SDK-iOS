@@ -1,5 +1,5 @@
 //
-//  TaxSummaryResponse.h
+//  AvaTaxTaxSummaryResponse.h
 //  AvaTax-Calc
 //
 //  Created by Rob Busack on 2/4/14.
@@ -11,7 +11,7 @@
 @class AvaTaxTaxSummary;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface TaxSummaryResponse : AvaTaxResponse
+@interface AvaTaxTaxSummaryResponse : AvaTaxResponse
 
 @property NSString* MerchantCode;
 @property NSString* PeriodStart;
