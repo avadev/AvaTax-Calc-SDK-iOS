@@ -1,5 +1,5 @@
 //
-//  GetTaxResponseBody.h
+//  AvaTaxGetTaxResponse.h
 //  AvaTax-Calc
 //
 //  Created by Rob Busack on 1/8/14.
@@ -9,7 +9,7 @@
 #import "AvaTaxResponse.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface GetTaxResponseBody : AvaTaxResponse
+@interface AvaTaxGetTaxResponse : AvaTaxResponse
 
 @property NSString<Optional>*   DocCode;
 @property NSDate<Optional>*     DocDate;

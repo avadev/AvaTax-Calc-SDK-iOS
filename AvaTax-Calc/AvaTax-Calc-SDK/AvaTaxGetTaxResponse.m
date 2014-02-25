@@ -1,19 +1,19 @@
 //
-//  GetTaxResponseBody.m
+//  AvaTaxGetTaxResponse.m
 //  AvaTax-Calc
 //
 //  Created by Rob Busack on 1/8/14.
 //  Copyright (c) 2014 Avalara. All rights reserved.
 //
 
-#import "GetTaxResponseBody.h"
+#import "AvaTaxGetTaxResponse.h"
 #import "AvaTaxGetTaxRequest.h"
 
 static NSString* const AVA_TAX_TIMESTAMP_FORMAT = @"yyyy-MM-dd'T'HH:mm:ssZ";
 static NSString* const AVA_TAX_TAX_DATE_FORMAT = @"yyyy-MM-dd";
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation GetTaxResponseBody
+@implementation AvaTaxGetTaxResponse
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
     if ([propertyName isEqualToString:@"TotalAmount"] ||

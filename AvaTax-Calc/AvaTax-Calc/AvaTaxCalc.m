@@ -10,10 +10,10 @@
 #import "RBTBase64.h"
 #import "AvaTaxWebCall.h"
 #import "AvaTaxGetTaxRequest.h"
-#import "GetTaxResponseBody.h"
+#import "AvaTaxGetTaxResponse.h"
 #import "AvaTaxAddress.h"
 #import "AvaTaxValidateAddressResponse.h"
-#import "CancelTaxRequestBody.h"
+#import "AvaTaxCancelTaxRequest.h"
 #import "AvaTaxCancelTaxResponse.h"
 #import "TaxSummaryRequestBody.h"
 #import "TaxSummaryResponse.h"
@@ -69,7 +69,7 @@
     JSONModelError* error = nil;
     
     NSString* responseAsString = [webCall responseAsString];
-    GetTaxResponseBody* response = [[GetTaxResponseBody alloc] initWithString:responseAsString error:&error];
+    AvaTaxGetTaxResponse* response = [[AvaTaxGetTaxResponse alloc] initWithString:responseAsString error:&error];
     NSObject<AvaTaxGetTaxDelegate>* callback = webCall.userObject;
     [callback getTaxFinished:response];
 }
@@ -94,7 +94,7 @@
     [callback validateAddressFinished:response];
 }
 
-- (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback {
+- (void)cancelTax:(AvaTaxCancelTaxRequest*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback {
     NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/cancel", [self hostName]];
     
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(cancelTaxFinished:)];
@@ -133,7 +133,7 @@
 - (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback {
     NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/%f,%f/get?%f", [self hostName], latitude, longitude, saleAmount];
     
-    AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(estimateTaxDidFinish:)];
+    AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(estimateTaxFinished:)];
     webCall.userObject = callback;
     [webCall addAuthFrom:self];
     [webCall get];

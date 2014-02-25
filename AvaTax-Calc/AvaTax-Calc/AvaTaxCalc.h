@@ -7,10 +7,10 @@
 //
 
 @class AvaTaxGetTaxRequest;
-@class GetTaxResponseBody;
+@class AvaTaxGetTaxResponse;
 @class AvaTaxAddress;
 @class AvaTaxValidateAddressResponse;
-@class CancelTaxRequestBody;
+@class AvaTaxCancelTaxRequest;
 @class AvaTaxCancelTaxResponse;
 @class TaxSummaryRequestBody;
 @class TaxSummaryResponse;
@@ -19,7 +19,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol AvaTaxGetTaxDelegate
 
-- (void)getTaxFinished:(GetTaxResponseBody*)response;
+- (void)getTaxFinished:(AvaTaxGetTaxResponse*)response;
 
 @end
 
@@ -65,7 +65,7 @@
 - (id)initWithUser:(NSString*)username password:(NSString *)password development:(BOOL)devServersNotProd;
 - (void)getTax:(AvaTaxGetTaxRequest*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
-- (void)cancelTax:(CancelTaxRequestBody*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
+- (void)cancelTax:(AvaTaxCancelTaxRequest*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
 - (void)getTaxSummary:(TaxSummaryRequestBody*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback;
 - (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback;
 

@@ -46,7 +46,7 @@
     
 }
 
-- (void)getTaxFinished:(GetTaxResponseBody*)response {
+- (void)getTaxFinished:(AvaTaxGetTaxResponse*)response {
     NSLog(@"getTaxFinished:\n%@\n\n", response);
 }
 
