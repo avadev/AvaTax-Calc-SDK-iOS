@@ -13,15 +13,14 @@
 #import "AvaTaxCalc.h"
 #import "TestUserCredentials.h"
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AddressValidationTestRunner : NSObject < AvaTaxValidateAddressDelegate >
 {
     GHAsyncTestCase* _testCase;
-//    void (^_responseHandler)(AvaTaxValidateAddressResponse*);
     AvaTaxValidateAddressResponse* _reponse;
 }
 
 @property (nonatomic,retain) GHAsyncTestCase* testCase;
-//@property (nonatomic,copy) void(^responseHandler)(AvaTaxValidateAddressResponse*);
 @property (nonatomic,retain) AvaTaxValidateAddressResponse* response;
 
 + (void)testAddressValidationFor:(AvaTaxAddress*)address testCase:(GHAsyncTestCase*)testCase responseHandler:(void(^)(AvaTaxValidateAddressResponse*))responseHandler;
@@ -29,9 +28,9 @@
 
 @end
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AddressValidationTestRunner
 
-//@synthesize responseHandler = _reponseHandler;
 @synthesize testCase = _testCase;
 @synthesize response = _response;
 
@@ -40,7 +39,6 @@
     
     AddressValidationTestRunner* runner = [[AddressValidationTestRunner alloc] init];
     runner.testCase = testCase;
-//    runner.responseHandler = responseHandler;
     AvaTaxCalc* calc = [[AvaTaxCalc alloc] initWithUser:TEST_USERNAME password:TEST_PASSWORD development:YES];
     [calc validateAddress:address callback:runner];
     
@@ -56,6 +54,7 @@
 
 @end
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AddressValidationTests
 
 - (void)test1 {
