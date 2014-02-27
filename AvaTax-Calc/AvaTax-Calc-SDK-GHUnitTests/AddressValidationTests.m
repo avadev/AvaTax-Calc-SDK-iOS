@@ -127,11 +127,10 @@
     [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
         GHAssertTrue(response.ResultCode == ResultCode_Error, @"");
         GHAssertTrue(response.Messages.count == 1, @"");
-        NSDictionary* m = [response.Messages objectAtIndex:0];
-        AvaTaxResponseMessage* message = [[AvaTaxResponseMessage alloc] initWithDictionary:m error:nil];
+        AvaTaxResponseMessage* message = [response.Messages objectAtIndex:0];
         GHAssertTrue([message.Summary isEqualToString:@"The address number is out of range"], @"");
         GHAssertTrue([message.RefersTo isEqualToString:@"Address.Line1"], @"");
-        GHAssertTrue([message.Severity isEqualToString:@"Error"], @"");
+        GHAssertTrue(message.Severity == ResultCode_Error, @"");
         GHAssertTrue([message.Source isEqualToString:@"Avalara.AvaTax.Services.Address"], @"");
     }];
 }

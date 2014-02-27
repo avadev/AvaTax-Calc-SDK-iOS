@@ -8,12 +8,22 @@
 
 #import "AvaTaxResponse.h"
 
+@protocol AvaTaxTaxDetail
+@end
+
+@class AvaTaxTaxDetail;
+
+/**
+ * Documentation:
+ * http://developer.avalara.com/api-docs/rest/tax/get
+ */
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxEstimateTaxResponse : AvaTaxResponse
 
 @property double Rate;
 @property double Tax;
-@property NSArray* TaxDetail;   // contains AvaTaxTaxDetail objects
+@property NSArray<AvaTaxTaxDetail>* TaxDetails;
 
 @end
 

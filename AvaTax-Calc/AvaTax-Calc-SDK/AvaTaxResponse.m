@@ -11,20 +11,21 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxResponse
 
-- (void)setResultCodeWithNSString:(NSString*)resultCodeString {
++ (AvaTaxResultCode)resultCodeEnumFromString:(NSString*)resultCodeString {
     if ([resultCodeString isEqualToString:@"Success"]) {
-        self.ResultCode = ResultCode_Success;
+        return ResultCode_Success;
     } else if ([resultCodeString isEqualToString:@"Error"]) {
-        self.ResultCode = ResultCode_Error;
+        return ResultCode_Error;
     } else if ([resultCodeString isEqualToString:@"Warning"]) {
-        self.ResultCode = ResultCode_Warning;
+        return ResultCode_Warning;
     } else if ([resultCodeString isEqualToString:@"Exception"]) {
-        self.ResultCode = ResultCode_Exception;
+        return ResultCode_Exception;
     }
+    return -1;
 }
 
-- (id)JSONObjectForResultCode {
-    switch (self.ResultCode) {
++ (NSString*)resultCodeStringFromEnum:(AvaTaxResultCode)resultCode {
+    switch (resultCode) {
         case ResultCode_Success:
             return @"Success";
         case ResultCode_Error:
@@ -38,9 +39,25 @@
     }
 }
 
+- (void)setResultCodeWithNSString:(NSString*)resultCodeString {
+    self.ResultCode = [AvaTaxResponse resultCodeEnumFromString:resultCodeString];
+}
+
+- (id)JSONObjectForResultCode {
+    return [AvaTaxResponse resultCodeStringFromEnum:self.ResultCode];
+}
+
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxResponseMessage
+
+- (void)setSeverityLevelWithNSString:(NSString*)severityLevelString {
+    self.Severity = [AvaTaxResponse resultCodeEnumFromString:severityLevelString];
+}
+
+- (id)JSONObjectForSeverityLevel {
+    return [AvaTaxResponse resultCodeStringFromEnum:self.Severity];
+}
 
 @end

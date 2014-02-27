@@ -15,6 +15,9 @@ typedef enum {
     ResultCode_Exception
 } AvaTaxResultCode;
 
+@protocol AvaTaxResponseMessage
+@end
+
 /**
  * Documentation:
  * http://developer.avalara.com/api-docs/rest
@@ -25,7 +28,7 @@ typedef enum {
 @interface AvaTaxResponse : JSONModel
 
 @property AvaTaxResultCode ResultCode;
-@property NSArray<Optional>* Messages;  // contains NSDictionary instances.  You should alloc/init an AvaTaxResponseMessage for each dictionary you want to access.
+@property NSArray<AvaTaxResponseMessage,Optional>* Messages;
 
 @end
 
@@ -36,7 +39,7 @@ typedef enum {
 
 @property NSString* Summary;
 @property NSString* Details;
-@property NSString* Severity;
+@property AvaTaxResultCode Severity;
 @property NSString* Source;
 @property NSString* RefersTo;
 
