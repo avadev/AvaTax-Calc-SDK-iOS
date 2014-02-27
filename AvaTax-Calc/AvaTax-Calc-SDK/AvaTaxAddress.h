@@ -8,12 +8,14 @@
 
 #import "JSONModel.h"
 
-// http://developer.avalara.com/api-docs/rest/address-validation
+/**
+ * Documentation:
+ * http://developer.avalara.com/api-docs/rest/address-validation
+ */
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxAddress : JSONModel
 
-//@property NSString *AddressCode;
 @property NSString *Line1;  // Address line 1
 @property NSString *Line2;
 @property NSString *Line3;
@@ -22,6 +24,8 @@
 @property NSString *PostalCode;
 @property NSString *Country;
 
-@property NSString *State;  // this gets & sets Region under the hood
+@property NSString *State;  // this gets & sets Region under the hood, it's just another name for the same property
+
+@property (readonly) NSString* Line1Line2Line3; // for convenience, a space-delimited concatination
 
 @end

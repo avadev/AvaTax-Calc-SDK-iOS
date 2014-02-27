@@ -17,6 +17,11 @@ typedef enum {
     AddressType_S
 } AvaTaxAddressType;
 
+/**
+ * Documentation:
+ * http://developer.avalara.com/api-docs/rest/address-validation
+ */
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxValidatedAddress : AvaTaxAddress
 

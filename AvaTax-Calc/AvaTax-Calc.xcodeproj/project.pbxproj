@@ -18,6 +18,7 @@
 		D4337FC918B58B4C004B19BB /* AddressValidationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FC818B58B4C004B19BB /* AddressValidationTests.m */; };
 		D4337FCC18B58E7F004B19BB /* TestUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FCB18B58E7F004B19BB /* TestUserCredentials.m */; };
 		D4337FCD18B58E7F004B19BB /* TestUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FCB18B58E7F004B19BB /* TestUserCredentials.m */; };
+		D4337FD018BFB74B004B19BB /* AvaTaxUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FCF18BFB74B004B19BB /* AvaTaxUtil.m */; };
 		D4865FF518887DDC005F9F6C /* AvaTaxAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */; };
 		D498272E185FA78100807C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
 		D4982730185FA78100807C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272F185FA78100807C24 /* CoreGraphics.framework */; };
@@ -89,6 +90,8 @@
 		D4337FC818B58B4C004B19BB /* AddressValidationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressValidationTests.m; sourceTree = "<group>"; };
 		D4337FCA18B58E7E004B19BB /* TestUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUserCredentials.h; sourceTree = "<group>"; };
 		D4337FCB18B58E7F004B19BB /* TestUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUserCredentials.m; sourceTree = "<group>"; };
+		D4337FCE18BFB74B004B19BB /* AvaTaxUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxUtil.h; sourceTree = "<group>"; };
+		D4337FCF18BFB74B004B19BB /* AvaTaxUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxUtil.m; sourceTree = "<group>"; };
 		D4865FF318887DDC005F9F6C /* AvaTaxAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxAddress.h; sourceTree = "<group>"; };
 		D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxAddress.m; sourceTree = "<group>"; };
 		D498272A185FA78100807C24 /* AvaTax-Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AvaTax-Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +284,8 @@
 				D4337FAA18A18BC6004B19BB /* AvaTaxTaxSummaryResponse.m */,
 				D4337FAC18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.h */,
 				D4337FAD18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m */,
+				D4337FCE18BFB74B004B19BB /* AvaTaxUtil.h */,
+				D4337FCF18BFB74B004B19BB /* AvaTaxUtil.m */,
 			);
 			path = "AvaTax-Calc-SDK";
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 				D49827AA18623AC100807C24 /* RBTBase64.m in Sources */,
 				D4C425DE187747C50030EF00 /* JSONKeyMapper.m in Sources */,
 				D4C4261C1877699E0030EF00 /* AvaTaxWebCall.m in Sources */,
+				D4337FD018BFB74B004B19BB /* AvaTaxUtil.m in Sources */,
 				D4C425BB1877475A0030EF00 /* AvaTaxGetTaxRequest.m in Sources */,
 				D4C425D7187747C50030EF00 /* JSONModelArray.m in Sources */,
 				D4C42622187E05CA0030EF00 /* AvaTaxGetTaxResponse.m in Sources */,

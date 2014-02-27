@@ -9,6 +9,7 @@
 #import "AvaTaxResponse.h"
 #import "AvaTaxValidatedAddress.h"
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxValidateAddressResponse : AvaTaxResponse
 
 @property AvaTaxValidatedAddress *Address;

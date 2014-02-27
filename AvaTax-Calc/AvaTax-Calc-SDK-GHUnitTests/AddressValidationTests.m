@@ -9,6 +9,7 @@
 #import "AddressValidationTests.h"
 #import "AvaTaxAddress.h"
 #import "AvaTaxValidateAddressResponse.h"
+#import "AvaTaxValidatedAddress.h"
 #import "AvaTaxCalc.h"
 #import "TestUserCredentials.h"
 
@@ -57,7 +58,7 @@
 
 @implementation AddressValidationTests
 
-- (void)testSmithTowerRegionTypo {
+- (void)test1 {
     AvaTaxAddress* address = [[AvaTaxAddress alloc] init];
     address.Line1 = @"506 2nd Ave";
     address.Line2 = @"Ste 800";
@@ -66,9 +67,58 @@
     address.PostalCode = @"98144-2328";
     
     [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
-        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"Result code 200");
+        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"");
+        GHAssertTrue([response.Address.Line1Line2Line3 isEqualToString:@"506 2nd Ave Ste 800"], @"");
+        GHAssertTrue([response.Address.Region isEqualToString:@"WA"], @"");
+        GHAssertTrue(response.Address.AddressType == AddressType_H, @"");
+        GHAssertTrue([response.Address.CarrierRoute isEqualToString:@"C042"], @"");
+        GHAssertTrue([response.Address.PostNet isEqualToString:@"981042328003"], @"");
+        GHAssertTrue([response.Address.FipsCode isEqualToString:@"5303300000"], @"");
     }];
 }
+
+- (void)test2 {
+    AvaTaxAddress* address = [[AvaTaxAddress alloc] init];
+    address.Line1 = @"435 Erickson Ave NE";
+    address.Line2 = @"";
+    address.City = @"Bainbridge Island";
+    address.Region = @"WA";
+    address.PostalCode = @"98110";
+    
+    [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
+        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"");
+        GHAssertTrue([response.Address.Line1Line2Line3 isEqualToString:@"435 Ericksen Ave NE"], @"");
+        GHAssertTrue([response.Address.City isEqualToString:@"Bainbridge Island"], @"");
+        GHAssertTrue([response.Address.Region isEqualToString:@"WA"], @"");
+        GHAssertTrue(response.Address.AddressType == AddressType_H, @"");
+        GHAssertTrue([response.Address.CarrierRoute isEqualToString:@"C051"], @"");
+        GHAssertTrue([response.Address.PostNet isEqualToString:@"981101896999"], @"");
+        GHAssertTrue([response.Address.FipsCode isEqualToString:@"5303500000"], @"");
+    }];
+}
+
+- (void)test3 {
+    AvaTaxAddress* address = [[AvaTaxAddress alloc] init];
+    address.Line1 = @"Unit 2050";
+    address.Line2 = @"Box 4190";
+    address.City = @"APO";
+    address.Region = @"AP";
+    address.PostalCode = @"96278-2050";
+    
+    [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
+        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"");
+        GHAssertTrue([response.Address.Line3 isEqualToString:@"Unit 2050 Box 4190"], @"");
+        GHAssertTrue([response.Address.City isEqualToString:@"APO"], @"");
+        GHAssertTrue([response.Address.Region isEqualToString:@"AP"], @"");
+        GHAssertTrue([response.Address.Country isEqualToString:@"US"], @"");
+        GHAssertTrue([response.Address.PostalCode isEqualToString:@"96278-2050"], @"");
+        GHAssertTrue(response.Address.AddressType == AddressType_S, @"");
+        GHAssertTrue([response.Address.CarrierRoute isEqualToString:@"C000"], @"");
+        GHAssertTrue([response.Address.PostNet isEqualToString:@"962782050902"], @"");
+        GHAssertTrue([response.Address.FipsCode isEqualToString:@"0000000000"], @"");
+    }];
+}
+
 
 
 
