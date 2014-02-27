@@ -16,17 +16,25 @@
 @class AvaTaxTaxSummaryResponse;
 @class AvaTaxEstimateTaxResponse;
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-@protocol AvaTaxGetTaxDelegate
-
-- (void)getTaxFinished:(AvaTaxGetTaxResponse*)response;
-
-@end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol AvaTaxValidateAddressDelegate
 
 - (void)validateAddressFinished:(AvaTaxValidateAddressResponse*)response;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol AvaTaxEstimateTaxDelegate
+
+- (void)estimateTaxFinished:(AvaTaxEstimateTaxResponse*)response;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol AvaTaxGetTaxDelegate
+
+- (void)getTaxFinished:(AvaTaxGetTaxResponse*)response;
 
 @end
 
@@ -45,13 +53,6 @@
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@protocol AvaTaxEstimateTaxDelegate
-
-- (void)estimateTaxFinished:(AvaTaxEstimateTaxResponse*)response;
-
-@end
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCalc : NSObject
 {
     NSString* _username;
@@ -63,10 +64,10 @@
 @property (readonly) NSString* username;
 
 - (id)initWithUser:(NSString*)username password:(NSString *)password development:(BOOL)devServersNotProd;
-- (void)getTax:(AvaTaxGetTaxRequest*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
 - (void)validateAddress:(AvaTaxAddress*)address callback:(NSObject<AvaTaxValidateAddressDelegate>*)callback;
+- (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback;
+- (void)getTax:(AvaTaxGetTaxRequest*)postBody callback:(NSObject<AvaTaxGetTaxDelegate>*)callback;
 - (void)cancelTax:(AvaTaxCancelTaxRequest*)cancelBody callback:(NSObject<AvaTaxCancelTaxDelegate>*)callback;
 - (void)getTaxSummary:(AvaTaxTaxSummaryRequest*)taxSummaryRequest callback:(NSObject<AvaTaxTaxSummaryDelegate>*)callback;
-- (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback;
 
 @end
