@@ -7,10 +7,7 @@
 //
 
 #import "AddressValidationTests.h"
-#import "AvaTaxAddress.h"
-#import "AvaTaxValidateAddressResponse.h"
-#import "AvaTaxValidatedAddress.h"
-#import "AvaTaxCalc.h"
+#import "AvaTaxHeaders.h"
 #import "TestUserCredentials.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +63,7 @@
     address.PostalCode = @"98144-2328";
     
     [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
-        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"");
+        GHAssertTrue(response.ResultCode == ResultCode_Success, @"");
         GHAssertTrue([response.Address.Line1Line2Line3 isEqualToString:@"506 2nd Ave Ste 800"], @"");
         GHAssertTrue([response.Address.Region isEqualToString:@"WA"], @"");
         GHAssertTrue(response.Address.AddressType == AddressType_H, @"");
@@ -85,7 +82,7 @@
     address.PostalCode = @"98110";
     
     [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
-        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"");
+        GHAssertTrue(response.ResultCode == ResultCode_Success, @"");
         GHAssertTrue([response.Address.Line1Line2Line3 isEqualToString:@"435 Ericksen Ave NE"], @"");
         GHAssertTrue([response.Address.City isEqualToString:@"Bainbridge Island"], @"");
         GHAssertTrue([response.Address.Region isEqualToString:@"WA"], @"");
@@ -105,7 +102,7 @@
     address.PostalCode = @"96278-2050";
     
     [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
-        GHAssertTrue([response.ResultCode isEqualToString:@"Success"], @"");
+        GHAssertTrue(response.ResultCode == ResultCode_Success, @"");
         GHAssertTrue([response.Address.Line3 isEqualToString:@"Unit 2050 Box 4190"], @"");
         GHAssertTrue([response.Address.City isEqualToString:@"APO"], @"");
         GHAssertTrue([response.Address.Region isEqualToString:@"AP"], @"");
@@ -128,7 +125,7 @@
     address.PostalCode = @"53121";
     
     [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
-        GHAssertTrue([response.ResultCode isEqualToString:@"Error"], @"");
+        GHAssertTrue(response.ResultCode == ResultCode_Error, @"");
         GHAssertTrue(response.Messages.count == 1, @"");
         NSDictionary* m = [response.Messages objectAtIndex:0];
         AvaTaxResponseMessage* message = [[AvaTaxResponseMessage alloc] initWithDictionary:m error:nil];

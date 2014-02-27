@@ -8,12 +8,23 @@
 
 #import "JSONModel.h"
 
-// http://developer.avalara.com/api-docs/rest
+typedef enum {
+    ResultCode_Success,
+    ResultCode_Error,
+    ResultCode_Warning,
+    ResultCode_Exception
+} AvaTaxResultCode;
+
+/**
+ * Documentation:
+ * http://developer.avalara.com/api-docs/rest
+ * http://developer.avalara.com/api-docs/soap/shared-formats-and-methods
+ */
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxResponse : JSONModel
 
-@property NSString* ResultCode;
+@property AvaTaxResultCode ResultCode;
 @property NSArray<Optional>* Messages;  // contains NSDictionary instances.  You should alloc/init an AvaTaxResponseMessage for each dictionary you want to access.
 
 @end
