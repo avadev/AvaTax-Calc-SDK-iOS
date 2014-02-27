@@ -52,11 +52,11 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxResponseMessage
 
-- (void)setSeverityLevelWithNSString:(NSString*)severityLevelString {
+- (void)setSeverityWithNSString:(NSString*)severityLevelString {
     self.Severity = [AvaTaxResponse resultCodeEnumFromString:severityLevelString];
 }
 
-- (id)JSONObjectForSeverityLevel {
+- (id)JSONObjectForSeverity {
     return [AvaTaxResponse resultCodeStringFromEnum:self.Severity];
 }
 

@@ -131,7 +131,7 @@
 }
 
 - (void)estimateTaxForSaleAmount:(double)saleAmount latitude:(double)latitude longitude:(double)longitude callback:(NSObject<AvaTaxEstimateTaxDelegate>*)callback {
-    NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/%f,%f/get?%f", [self hostName], latitude, longitude, saleAmount];
+    NSString* url = [NSString stringWithFormat:@"https://%@/1.0/tax/%f,%f/get?saleamount=%.2f", [self hostName], latitude, longitude, saleAmount];
     
     AvaTaxWebCall* webCall = [[AvaTaxWebCall alloc] initWithUrl:url callbackTarget:self selector:@selector(estimateTaxFinished:)];
     webCall.userObject = callback;
