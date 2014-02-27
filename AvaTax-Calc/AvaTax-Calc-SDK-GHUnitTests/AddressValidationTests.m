@@ -119,6 +119,27 @@
     }];
 }
 
+- (void)test4 {
+    AvaTaxAddress* address = [[AvaTaxAddress alloc] init];
+    address.Line1 = @"3361 W. Kenosha";
+    address.Line2 = @"Powers Building";
+    address.Line3 = @"Suite  100";
+    address.City = @"Racine";
+    address.Region = @"WI";
+    address.PostalCode = @"53121";
+    
+    [AddressValidationTestRunner testAddressValidationFor:address testCase:self responseHandler:^(AvaTaxValidateAddressResponse* response){
+        GHAssertTrue([response.ResultCode isEqualToString:@"Error"], @"");
+        GHAssertTrue(response.Messages.count == 1, @"");
+        NSDictionary* m = [response.Messages objectAtIndex:0];
+        AvaTaxResponseMessage* message = [[AvaTaxResponseMessage alloc] initWithDictionary:m error:nil];
+        GHAssertTrue([message.Summary isEqualToString:@"The address number is out of range"], @"");
+        GHAssertTrue([message.RefersTo isEqualToString:@"Address.Line1"], @"");
+        GHAssertTrue([message.Severity isEqualToString:@"Error"], @"");
+        GHAssertTrue([message.Source isEqualToString:@"Avalara.AvaTax.Services.Address"], @"");
+    }];
+}
+
 
 
 

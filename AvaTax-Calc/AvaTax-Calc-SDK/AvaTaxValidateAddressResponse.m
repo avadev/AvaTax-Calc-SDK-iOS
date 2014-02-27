@@ -11,4 +11,13 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxValidateAddressResponse
 
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    if ([propertyName isEqualToString:@"Address"]) {
+        return YES;
+    } else {
+        return [super propertyIsOptional:propertyName];
+    }
+}
+
 @end

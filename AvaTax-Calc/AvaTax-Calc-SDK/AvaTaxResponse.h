@@ -14,7 +14,7 @@
 @interface AvaTaxResponse : JSONModel
 
 @property NSString* ResultCode;
-@property NSArray<Optional>* Messages;
+@property NSArray<Optional>* Messages;  // contains NSDictionary instances.  You should alloc/init an AvaTaxResponseMessage for each dictionary you want to access.
 
 @end
 
