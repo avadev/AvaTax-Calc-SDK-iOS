@@ -22,6 +22,19 @@
 		D4337FD518BFD0FB004B19BB /* EstimateTaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FD218BFCE9D004B19BB /* EstimateTaxTests.m */; };
 		D4337FD818C01FF1004B19BB /* CancelTaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FD718C01FF1004B19BB /* CancelTaxTests.m */; };
 		D4337FDB18C0DF89004B19BB /* GetTaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337FDA18C0DF89004B19BB /* GetTaxTests.m */; };
+		D4337FDC18C11406004B19BB /* AvaTaxCalc.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D49827A118622F8B00807C24 /* AvaTaxCalc.h */; };
+		D4337FDE18C1141E004B19BB /* AvaTaxResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337F9718889C74004B19BB /* AvaTaxResponse.h */; };
+		D4337FDF18C1141E004B19BB /* AvaTaxAddress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4865FF318887DDC005F9F6C /* AvaTaxAddress.h */; };
+		D4337FE018C1141E004B19BB /* AvaTaxValidateAddressResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337F9A18889DEE004B19BB /* AvaTaxValidateAddressResponse.h */; };
+		D4337FE118C1141E004B19BB /* AvaTaxValidatedAddress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337F9D1888AE58004B19BB /* AvaTaxValidatedAddress.h */; };
+		D4337FE218C1141E004B19BB /* AvaTaxEstimateTaxResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337FAC18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.h */; };
+		D4337FE318C1141E004B19BB /* AvaTaxGetTaxRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C425B91877475A0030EF00 /* AvaTaxGetTaxRequest.h */; };
+		D4337FE418C1141E004B19BB /* AvaTaxGetTaxResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C42620187E05CA0030EF00 /* AvaTaxGetTaxResponse.h */; };
+		D4337FE518C1141E004B19BB /* AvaTaxCancelTaxRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337FA01897333A004B19BB /* AvaTaxCancelTaxRequest.h */; };
+		D4337FE618C1141E004B19BB /* AvaTaxCancelTaxResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337FA3189842C8004B19BB /* AvaTaxCancelTaxResponse.h */; };
+		D4337FE718C1141E004B19BB /* AvaTaxTaxSummaryRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337FA618A18B06004B19BB /* AvaTaxTaxSummaryRequest.h */; };
+		D4337FE818C1141E004B19BB /* AvaTaxTaxSummaryResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337FA918A18BC6004B19BB /* AvaTaxTaxSummaryResponse.h */; };
+		D4337FE918C1141E004B19BB /* AvaTaxUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4337FCE18BFB74B004B19BB /* AvaTaxUtil.h */; };
 		D4865FF518887DDC005F9F6C /* AvaTaxAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */; };
 		D498272E185FA78100807C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
 		D4982730185FA78100807C24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272F185FA78100807C24 /* CoreGraphics.framework */; };
@@ -67,6 +80,19 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				D4337FDE18C1141E004B19BB /* AvaTaxResponse.h in CopyFiles */,
+				D4337FDF18C1141E004B19BB /* AvaTaxAddress.h in CopyFiles */,
+				D4337FE018C1141E004B19BB /* AvaTaxValidateAddressResponse.h in CopyFiles */,
+				D4337FE118C1141E004B19BB /* AvaTaxValidatedAddress.h in CopyFiles */,
+				D4337FE218C1141E004B19BB /* AvaTaxEstimateTaxResponse.h in CopyFiles */,
+				D4337FE318C1141E004B19BB /* AvaTaxGetTaxRequest.h in CopyFiles */,
+				D4337FE418C1141E004B19BB /* AvaTaxGetTaxResponse.h in CopyFiles */,
+				D4337FE518C1141E004B19BB /* AvaTaxCancelTaxRequest.h in CopyFiles */,
+				D4337FE618C1141E004B19BB /* AvaTaxCancelTaxResponse.h in CopyFiles */,
+				D4337FE718C1141E004B19BB /* AvaTaxTaxSummaryRequest.h in CopyFiles */,
+				D4337FE818C1141E004B19BB /* AvaTaxTaxSummaryResponse.h in CopyFiles */,
+				D4337FE918C1141E004B19BB /* AvaTaxUtil.h in CopyFiles */,
+				D4337FDC18C11406004B19BB /* AvaTaxCalc.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +128,7 @@
 		D4337FD718C01FF1004B19BB /* CancelTaxTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelTaxTests.m; sourceTree = "<group>"; };
 		D4337FD918C0DF89004B19BB /* GetTaxTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTaxTests.h; sourceTree = "<group>"; };
 		D4337FDA18C0DF89004B19BB /* GetTaxTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTaxTests.m; sourceTree = "<group>"; };
+		D4337FED18C1189A004B19BB /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = SOURCE_ROOT; };
 		D4865FF318887DDC005F9F6C /* AvaTaxAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxAddress.h; sourceTree = "<group>"; };
 		D4865FF418887DDC005F9F6C /* AvaTaxAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxAddress.m; sourceTree = "<group>"; };
 		D498272A185FA78100807C24 /* AvaTax-Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AvaTax-Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +292,7 @@
 		D4982763185FC07A00807C24 /* AvaTax-Calc-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				D4337FED18C1189A004B19BB /* README.txt */,
 				D4982764185FC07A00807C24 /* Supporting Files */,
 				D4337FD418BFCF33004B19BB /* AvaTaxHeaders.h */,
 				D49827A118622F8B00807C24 /* AvaTaxCalc.h */,
