@@ -8,12 +8,26 @@
 
 #import "JSONModel.h"
 
+typedef enum {
+    CancelCode_Unspecified,
+    CancelCode_PostFailed,
+    CancelCode_DocDeleted,
+    CancelCode_DocVoided,
+    CancelCode_AdjustmentCancelled
+} AvaTaxCancelCode;
+
+/**
+ * Documentation:
+ * http://developer.avalara.com/api-docs/rest/tax/cancel
+ */
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCancelTaxRequest : JSONModel
 
-@property NSString* CompanyCode;
-@property NSString* DocType;
-@property NSString* DocCode;
-@property NSString* CancelCode;
+@property NSString<Optional>* CompanyCode;
+@property NSString<Optional>* DocType;
+@property NSString<Optional>* DocCode;
+@property AvaTaxCancelCode CancelCode;
+@property NSString<Optional>* DocId;
 
 @end
