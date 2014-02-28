@@ -13,9 +13,8 @@ NSString* const AVA_TAX_DOC_DATE_FORMAT = @"yyyy-MM-dd";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxGetTaxRequest
 
-+(BOOL)propertyIsIgnored:(NSString*)propertyName {
-    if ([propertyName isEqualToString:@"Commit"]
-        || [propertyName isEqualToString:@"Discount"]) {
++ (BOOL)propertyIsIgnored:(NSString*)propertyName {
+    if ([propertyName isEqualToString:@"Commit"]) {
         return YES;
     }
     
@@ -23,7 +22,8 @@ NSString* const AVA_TAX_DOC_DATE_FORMAT = @"yyyy-MM-dd";
 }
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
-    if ([propertyName isEqualToString:@"DocType"]) {
+    if ([propertyName isEqualToString:@"DocType"] ||
+        [propertyName isEqualToString:@"Discount"]) {
         return YES;
     }
     
@@ -126,6 +126,25 @@ NSString* const AVA_TAX_DOC_DATE_FORMAT = @"yyyy-MM-dd";
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation AvalaraLine
+@implementation AvaTaxGetTaxAddress
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    if ([propertyName isEqualToString:@"Latitude"] ||
+        [propertyName isEqualToString:@"Longitude"]) {
+        return YES;
+    }
+    
+    return [super propertyIsOptional:propertyName];
+}
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@implementation AvaTaxLine
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@implementation AvaTaxTaxOverride
 
 @end

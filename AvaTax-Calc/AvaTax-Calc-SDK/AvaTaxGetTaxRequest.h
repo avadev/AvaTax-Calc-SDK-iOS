@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "JSONModel.h"
+#import "AvaTaxAddress.h"
 
-@class AvaTaxAddress;
-@class AvalaraLine;
-@class RBTAvaTaxTaxOverride;
+@protocol AvaTaxGetTaxAddress
+@end
+
+@protocol AvaTaxLine
+@end
+
+@class AvaTaxTaxOverride;
 
 extern NSString* const AVA_TAX_DOC_DATE_FORMAT;
 
@@ -48,6 +53,11 @@ typedef enum {
     R   // "Non-resident"
 } SystemCustomerUsageType;
 
+/**
+ * Documentation:
+ * http://developer.avalara.com/api-docs/rest/tax/post
+ */
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxGetTaxRequest : JSONModel
 {
@@ -57,8 +67,8 @@ typedef enum {
 // Required for Tax Calculation
 @property NSDate*   DocDate;
 @property NSString* CustomerCode;
-@property NSArray*  Addresses;  // at least one required
-@property NSArray*  Lines;      // at least one required
+@property NSArray<AvaTaxGetTaxAddress>* Addresses;  // at least one required
+@property NSArray<AvaTaxLine>* Lines;      // at least one required
 
 //Best Practice for tax calculation
 @property NSString<Optional>*   Client;
@@ -69,11 +79,11 @@ typedef enum {
 @property AvaTaxDetailLevel     DetailLevel;
 
 //Use where appropriate to the situation
-@property NSString<Optional>*   CustomerUsageType;  // TODO: do we want to use an enum for this?
+@property NSString<Optional>*   CustomerUsageType;
 @property NSString<Optional>*   ExemptionNo;
 @property float                 Discount;
 @property NSString<Optional>*   BusinessIdentificationNo;
-@property RBTAvaTaxTaxOverride<Optional>*   TaxOverride;
+@property AvaTaxTaxOverride<Optional>*   TaxOverride;
 
 //Optional
 @property NSString<Optional>*   PurchaseOrderNo;
@@ -85,18 +95,37 @@ typedef enum {
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface AvalaraLine : JSONModel
+@interface AvaTaxGetTaxAddress : AvaTaxAddress
 
-@property NSString* LineNo;
-@property NSString* DesitnationCode;
-@property NSString* OriginCode;
-@property int Qty;
-@property int Amount;
+@property NSString<Optional>* AddressCode;
+@property float Latitude;
+@property float Longitude;
+@property NSString<Optional>* TaxRegionId;
 
 @end
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-@interface RBTAvaTaxTaxOverride : JSONModel
+@interface AvaTaxLine : JSONModel
+
+@property NSString* LineNo;
+@property NSString* DesitnationCode;
+@property NSString* OriginCode;
+@property NSString<Optional>* ItemCode;
+@property NSString<Optional>* TaxCode;
+@property NSString<Optional>* CustomeUsageType;
+@property NSString<Optional>* Description;
+@property float Qty;
+@property float Amount;
+@property BOOL Discounted;
+@property BOOL TaxIncluded;
+@property NSString<Optional>* Ref1;
+@property NSString<Optional>* Ref2;
+@property AvaTaxTaxOverride<Optional>* TaxOverride;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@interface AvaTaxTaxOverride : JSONModel
 
 @property NSString *TaxOverrideType;   //TaxOverrideType
 @property NSNumber *TaxAmount;         //decimal
