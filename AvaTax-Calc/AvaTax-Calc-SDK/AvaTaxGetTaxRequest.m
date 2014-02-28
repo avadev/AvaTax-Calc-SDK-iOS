@@ -165,4 +165,62 @@ NSString* const CustomerUsageType_R_NonResident = @"R";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxTaxOverride
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    if ([propertyName isEqualToString:@"TaxAmount"] ||
+        [propertyName isEqualToString:@"TaxDate"]) {
+        return YES;
+    }
+    
+    return [super propertyIsOptional:propertyName];
+}
+
+- (void)setTaxOverrideTypeNSString:(NSString*)taxOverrideTypeString {
+    if ([taxOverrideTypeString isEqualToString:@"None"]) {
+        self.TaxOverrideType = TaxOverrideType_None;
+    } else if ([taxOverrideTypeString isEqualToString:@"TaxAmount"]) {
+        self.TaxOverrideType = TaxOverrideType_TaxAmount;
+    } else if ([taxOverrideTypeString isEqualToString:@"Exemption"]) {
+        self.TaxOverrideType = TaxOverrideType_Exemption;
+    } else if ([taxOverrideTypeString isEqualToString:@"TaxDate"]) {
+        self.TaxOverrideType = TaxOverrideType_TaxDate;
+    }
+}
+
+- (id)JSONObjectForTaxOverrideType {
+    switch (self.TaxOverrideType) {
+        case TaxOverrideType_None:
+            return @"None";
+            break;
+        case TaxOverrideType_TaxAmount:
+            return @"TaxAmount";
+            break;
+        case TaxOverrideType_Exemption:
+            return @"Exemption";
+            break;
+        case TaxOverrideType_TaxDate:
+            return @"TaxDate";
+            break;
+        default:
+            return nil;
+            break;
+    }
+}
+
+- (void)setTaxDateWithNSString:(NSString*)taxDateString {
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
+    self.TaxDate = [dateFormatter dateFromString:taxDateString];
+}
+
+- (id)JSONObjectForTaxDate {
+    if (self.TaxDate == nil) {
+        return nil;
+    }
+    
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    return [dateFormatter stringFromDate:self.TaxDate];
+}
+
 @end

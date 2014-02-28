@@ -34,6 +34,12 @@ typedef enum  {
     DetailLevel_Line,
     DetailLevel_Diagnostic
 } AvaTaxDetailLevel;
+typedef enum {
+    TaxOverrideType_None,
+    TaxOverrideType_TaxAmount,
+    TaxOverrideType_Exemption,
+    TaxOverrideType_TaxDate
+} AvaTaxTaxOverrideType;
 
 extern NSString* const CustomerUsageType_L_Other;
 extern NSString* const CustomerUsageType_A_FederalGovernment;
@@ -107,11 +113,11 @@ extern NSString* const CustomerUsageType_R_NonResident;
 @interface AvaTaxLine : JSONModel
 
 @property NSString* LineNo;
-@property NSString* DesitnationCode;
+@property NSString* DestinationCode;
 @property NSString* OriginCode;
 @property NSString<Optional>* ItemCode;
 @property NSString<Optional>* TaxCode;
-@property NSString<Optional>* CustomeUsageType;
+@property NSString<Optional>* CustomerUsageType;
 @property NSString<Optional>* Description;
 @property float Qty;
 @property float Amount;
@@ -126,9 +132,9 @@ extern NSString* const CustomerUsageType_R_NonResident;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxTaxOverride : JSONModel
 
-@property NSString *TaxOverrideType;   //TaxOverrideType
-@property NSNumber *TaxAmount;         //decimal
-@property NSDate *TaxDate;             //date
-@property NSString *Reason;            //string
+@property AvaTaxTaxOverrideType TaxOverrideType;
+@property float     TaxAmount;
+@property NSDate*   TaxDate;
+@property NSString* Reason;
 
 @end

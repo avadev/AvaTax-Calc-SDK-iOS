@@ -80,10 +80,26 @@
     address2.State = @"WA";
     address2.Country = @"US";
     address2.PostalCode = @"98144-6420";
-    request.Addresses = [NSArray arrayWithObjects:address1, address2, nil];
+    request.Addresses = (NSArray<AvaTaxGetTaxAddress>*)[NSArray arrayWithObjects:address1, address2, nil];
     
+    AvaTaxLine* line1001 = [[AvaTaxLine alloc] init];
+    line1001.LineNo = @"1001";
+    line1001.DestinationCode = @"2";
+    line1001.OriginCode = @"1";
+    line1001.ItemCode = @"CKBK-001";
+    line1001.TaxCode = @"DWNLD";
+    line1001.CustomerUsageType = CustomerUsageType_L_Other;
+    line1001.Qty = 1;
+    line1001.Amount = 5.00;
+    line1001.Discounted = NO;
+    line1001.TaxIncluded = NO;
+    request.Lines = (NSArray<AvaTaxLine>*)[NSArray arrayWithObjects:line1001, nil];
+
     
-    
+    [GetTaxTestRunner testGetTax:request testCase:self responseHandler:^(AvaTaxGetTaxResponse* response){
+        
+        
+    }];
 }
 
 @end

@@ -13,7 +13,8 @@
 @implementation AvaTaxAddress
 
 +(BOOL)propertyIsIgnored:(NSString*)propertyName  {
-    if ([propertyName isEqualToString:@"State"]) {
+    if ([propertyName isEqualToString:@"State"] ||
+        [propertyName isEqualToString:@"Line1Line2Line3"]) {
         return YES;
     }
     
