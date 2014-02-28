@@ -34,24 +34,23 @@ typedef enum  {
     DetailLevel_Line,
     DetailLevel_Diagnostic
 } AvaTaxDetailLevel;
-typedef enum {
-    L,  //"Other",
-    A,  //"Federal government",
-    B,  //"State government",
-    C,  //"Tribe / Status Indian / Indian Band",
-    D,  //"Foreign diplomat",
-    E,  //"Charitable or benevolent organization",
-    F,  //"Regligious or educational organization",
-    G,  //"Resale",
-    H,  //"Commercial agricultural production",
-    I,  // "Industrial production / manufacturer",
-    J,  // "Direct pay permit",
-    K,  // "Direct Mail",
-    N,  // "Local Government",
-    P,  // "Commercial Aquaculture",
-    Q,  // "Commercial Fishery",
-    R   // "Non-resident"
-} SystemCustomerUsageType;
+
+extern NSString* const CustomerUsageType_L_Other;
+extern NSString* const CustomerUsageType_A_FederalGovernment;
+extern NSString* const CustomerUsageType_B_StateGovernment;
+extern NSString* const CustomerUsageType_C_TribeIndianStatus;
+extern NSString* const CustomerUsageType_D_ForeignDiplomat;
+extern NSString* const CustomerUsageType_E_CharitableBenevolent;
+extern NSString* const CustomerUsageType_F_RegligiousEducational;
+extern NSString* const CustomerUsageType_G_Resale;
+extern NSString* const CustomerUsageType_H_CommercialAgricultural;
+extern NSString* const CustomerUsageType_I_Industrial;
+extern NSString* const CustomerUsageType_J_DirectPayPermit;
+extern NSString* const CustomerUsageType_K_DirectMail;
+extern NSString* const CustomerUsageType_N_LocalGovernment;
+extern NSString* const CustomerUsageType_P_CommercialAquaculture;
+extern NSString* const CustomerUsageType_Q_CommercialFishery;
+extern NSString* const CustomerUsageType_R_NonResident;
 
 /**
  * Documentation:

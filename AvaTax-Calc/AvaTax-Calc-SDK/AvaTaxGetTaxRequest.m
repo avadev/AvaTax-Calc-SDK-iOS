@@ -10,6 +10,24 @@
 
 NSString* const AVA_TAX_DOC_DATE_FORMAT = @"yyyy-MM-dd";
 
+// These can't simply be an enum, since the user may create their own additional codes.
+NSString* const CustomerUsageType_L_Other = @"L";
+NSString* const CustomerUsageType_A_FederalGovernment = @"A";
+NSString* const CustomerUsageType_B_StateGovernment = @"B";
+NSString* const CustomerUsageType_C_TribeIndianStatus = @"C";
+NSString* const CustomerUsageType_D_ForeignDiplomat = @"D";
+NSString* const CustomerUsageType_E_CharitableBenevolent = @"E";
+NSString* const CustomerUsageType_F_RegligiousEducational = @"F";
+NSString* const CustomerUsageType_G_Resale = @"G";
+NSString* const CustomerUsageType_H_CommercialAgricultural = @"H";
+NSString* const CustomerUsageType_I_Industrial = @"I";
+NSString* const CustomerUsageType_J_DirectPayPermit = @"J";
+NSString* const CustomerUsageType_K_DirectMail = @"K";
+NSString* const CustomerUsageType_N_LocalGovernment = @"N";
+NSString* const CustomerUsageType_P_CommercialAquaculture = @"P";
+NSString* const CustomerUsageType_Q_CommercialFishery = @"Q";
+NSString* const CustomerUsageType_R_NonResident = @"R";
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxGetTaxRequest
 
