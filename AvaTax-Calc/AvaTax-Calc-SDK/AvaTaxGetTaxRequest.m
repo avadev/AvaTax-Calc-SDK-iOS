@@ -135,8 +135,8 @@ NSString* const CustomerUsageType_R_NonResident = @"R";
     }
     
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
     return [dateFormatter stringFromDate:self.DocDate];
 }
 
@@ -159,6 +159,15 @@ NSString* const CustomerUsageType_R_NonResident = @"R";
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxLine
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    if ([propertyName isEqualToString:@"Discounted"] ||
+        [propertyName isEqualToString:@"TaxIncluded"]) {
+        return YES;
+    }
+    
+    return [super propertyIsOptional:propertyName];
+}
 
 @end
 
@@ -218,8 +227,8 @@ NSString* const CustomerUsageType_R_NonResident = @"R";
     }
     
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
     return [dateFormatter stringFromDate:self.TaxDate];
 }
 

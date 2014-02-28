@@ -42,8 +42,8 @@ static NSString* const AVA_TAX_TAX_DATE_FORMAT = @"yyyy-MM-dd";
     }
     
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateFormat:AVA_TAX_DOC_DATE_FORMAT];
     return [dateFormatter stringFromDate:self.DocDate];
 }
 
@@ -77,8 +77,8 @@ static NSString* const AVA_TAX_TAX_DATE_FORMAT = @"yyyy-MM-dd";
     }
     
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:AVA_TAX_TAX_DATE_FORMAT];
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateFormat:AVA_TAX_TAX_DATE_FORMAT];
     return [dateFormatter stringFromDate:self.TaxDate];
 }
 
