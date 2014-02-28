@@ -7,3 +7,4 @@ AvaTax-Calc/build
 project.xcworkspace/
 xcuserdata/
 AvaTax-Calc/AvaTax-Calc.xcodeproj/xcuserdata/*
+build/
