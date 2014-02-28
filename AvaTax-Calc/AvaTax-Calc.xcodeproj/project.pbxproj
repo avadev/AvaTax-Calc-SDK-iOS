@@ -47,7 +47,7 @@
 		D4982785185FC11500807C24 /* SampleGetTaxCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D4982784185FC11500807C24 /* SampleGetTaxCall.m */; };
 		D49827A418622F8F00807C24 /* AvaTaxCalc.m in Sources */ = {isa = PBXBuildFile; fileRef = D49827A218622F8B00807C24 /* AvaTaxCalc.m */; };
 		D49827A918623AAA00807C24 /* libAvaTax-Calc-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4982761185FC07A00807C24 /* libAvaTax-Calc-SDK.a */; };
-		D49827AA18623AC100807C24 /* RBTBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D498279F185FC65900807C24 /* RBTBase64.m */; };
+		D49827AA18623AC100807C24 /* AvaTaxBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D498279F185FC65900807C24 /* AvaTaxBase64.m */; };
 		D4C425BB1877475A0030EF00 /* AvaTaxGetTaxRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425BA1877475A0030EF00 /* AvaTaxGetTaxRequest.m */; };
 		D4C425D6187747C50030EF00 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425BF187747C50030EF00 /* JSONModel.m */; };
 		D4C425D7187747C50030EF00 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425C1187747C50030EF00 /* JSONModelArray.m */; };
@@ -147,8 +147,8 @@
 		D4982765185FC07A00807C24 /* AvaTax-Calc-SDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AvaTax-Calc-SDK-Prefix.pch"; sourceTree = "<group>"; };
 		D4982783185FC11500807C24 /* SampleGetTaxCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleGetTaxCall.h; sourceTree = "<group>"; };
 		D4982784185FC11500807C24 /* SampleGetTaxCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleGetTaxCall.m; sourceTree = "<group>"; };
-		D498279E185FC65900807C24 /* RBTBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBTBase64.h; path = "../AvaTax-Calc/RBTBase64.h"; sourceTree = "<group>"; };
-		D498279F185FC65900807C24 /* RBTBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBTBase64.m; path = "../AvaTax-Calc/RBTBase64.m"; sourceTree = "<group>"; };
+		D498279E185FC65900807C24 /* AvaTaxBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvaTaxBase64.h; path = "../AvaTax-Calc/AvaTaxBase64.h"; sourceTree = "<group>"; };
+		D498279F185FC65900807C24 /* AvaTaxBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvaTaxBase64.m; path = "../AvaTax-Calc/AvaTaxBase64.m"; sourceTree = "<group>"; };
 		D49827A118622F8B00807C24 /* AvaTaxCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvaTaxCalc.h; path = "../AvaTax-Calc/AvaTaxCalc.h"; sourceTree = "<group>"; };
 		D49827A218622F8B00807C24 /* AvaTaxCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvaTaxCalc.m; path = "../AvaTax-Calc/AvaTaxCalc.m"; sourceTree = "<group>"; };
 		D49827A61862333500807C24 /* AvaTaxWebCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxWebCall.h; sourceTree = "<group>"; };
@@ -297,8 +297,8 @@
 				D4337FD418BFCF33004B19BB /* AvaTaxHeaders.h */,
 				D49827A118622F8B00807C24 /* AvaTaxCalc.h */,
 				D49827A218622F8B00807C24 /* AvaTaxCalc.m */,
-				D498279E185FC65900807C24 /* RBTBase64.h */,
-				D498279F185FC65900807C24 /* RBTBase64.m */,
+				D498279E185FC65900807C24 /* AvaTaxBase64.h */,
+				D498279F185FC65900807C24 /* AvaTaxBase64.m */,
 				D49827A61862333500807C24 /* AvaTaxWebCall.h */,
 				D49827A71862333500807C24 /* AvaTaxWebCall.m */,
 				D4337F9718889C74004B19BB /* AvaTaxResponse.h */,
@@ -550,7 +550,7 @@
 				D4C425D8187747C50030EF00 /* JSONModelClassProperty.m in Sources */,
 				D4337F9918889C74004B19BB /* AvaTaxResponse.m in Sources */,
 				D4337F9F1888AE58004B19BB /* AvaTaxValidatedAddress.m in Sources */,
-				D49827AA18623AC100807C24 /* RBTBase64.m in Sources */,
+				D49827AA18623AC100807C24 /* AvaTaxBase64.m in Sources */,
 				D4C425DE187747C50030EF00 /* JSONKeyMapper.m in Sources */,
 				D4C4261C1877699E0030EF00 /* AvaTaxWebCall.m in Sources */,
 				D4337FD018BFB74B004B19BB /* AvaTaxUtil.m in Sources */,

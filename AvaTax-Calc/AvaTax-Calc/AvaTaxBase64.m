@@ -1,16 +1,16 @@
 //
-//  RBTBase64.m
+//  AvaTaxBase64.m
 //  AvaTax
 //
 //  Created by Loke Uei Tan on 10/31/13.
 //  Copyright (c) 2013 Robotland. All rights reserved.
 //
 
-#import "RBTBase64.h"
+#import "AvaTaxBase64.h"
 
 static char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-@implementation RBTBase64 : NSObject
+@implementation AvaTaxBase64 : NSObject
 +(NSString *)encode:(NSData *)plainText {
     int encodedLength = (4 * (([plainText length] / 3) + (1 - (3 - ([plainText length] % 3)) / 3))) + 1;
     unsigned char *outputBuffer = malloc(encodedLength);

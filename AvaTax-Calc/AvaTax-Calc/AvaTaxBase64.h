@@ -1,5 +1,5 @@
 //
-//  RBTBase64.h
+//  AvaTaxBase64.h
 //  AvaTax
 //
 //  Created by Loke Uei Tan on 10/31/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RBTBase64 : NSObject
+@interface AvaTaxBase64 : NSObject
 
 +(NSString *)encode:(NSData *)plainText;
 

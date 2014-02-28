@@ -7,7 +7,7 @@
 //
 
 #import "AvaTaxCalc.h"
-#import "RBTBase64.h"
+#import "AvaTaxBase64.h"
 #import "AvaTaxWebCall.h"
 #import "AvaTaxGetTaxRequest.h"
 #import "AvaTaxGetTaxResponse.h"
@@ -45,7 +45,7 @@
     _username = username;
     
     NSString* loginString = [NSString stringWithFormat:@"%@:%@", username, password];
-    _encodedLoginData = [RBTBase64 encode:[loginString dataUsingEncoding:NSUTF8StringEncoding]];
+    _encodedLoginData = [AvaTaxBase64 encode:[loginString dataUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (NSString*)hostName {
