@@ -62,7 +62,7 @@
     request.DocDate = [AvaTaxUtil dateForYear:2013 month:12 day:16];
     request.CompanyCode = @"CZI";
     request.Commit = NO;
-    request.DocCode = @"222";
+//    request.DocCode = @"222";
     request.DocType = DocType_SalesInvoice;
     request.ReferenceCode = @"COZIMERCH";
     
@@ -97,7 +97,7 @@
 
     
     [GetTaxTestRunner testGetTax:request testCase:self responseHandler:^(AvaTaxGetTaxResponse* response){
-        
+        GHAssertTrue(response.ResultCode == ResultCode_Success, @"");
         
     }];
 }

@@ -107,7 +107,8 @@
     JSONModelError* error = nil;
     
     NSString* responseAsString = [webCall responseAsString];
-    AvaTaxCancelTaxResponse* response = [[AvaTaxCancelTaxResponse alloc] initWithString:responseAsString error:&error];
+    AvaTaxCancelTaxResponseWrapper* responseWrapper = [[AvaTaxCancelTaxResponseWrapper alloc] initWithString:responseAsString error:&error];
+    AvaTaxCancelTaxResponse* response = responseWrapper.CancelTaxResult;
     NSObject<AvaTaxCancelTaxDelegate>* callback = webCall.userObject;
     [callback cancelTaxFinished:response];
 }

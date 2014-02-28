@@ -56,7 +56,24 @@
 
 - (void)test1 {
     AvaTaxCancelTaxRequest* cancelTaxRequest = [[AvaTaxCancelTaxRequest alloc] init];
+    cancelTaxRequest.CompanyCode = @"CZI";
+    cancelTaxRequest.DocType = DocType_PurchaseInvoice;
+    cancelTaxRequest.DocCode = @"80076001";
     
+    [CancelTaxTestRunner testCancelTax:cancelTaxRequest testCase:self responseHandler:^(AvaTaxCancelTaxResponse* response) {
+        GHAssertTrue(response.ResultCode == ResultCode_Success, @"");
+        GHAssertTrue([response.DocId isEqualToString:@"40534925"], @"");
+    }];
+}
+
+- (void)test2 {
+    AvaTaxCancelTaxRequest* cancelTaxRequest = [[AvaTaxCancelTaxRequest alloc] init];
+    cancelTaxRequest.DocId = @"40534925";
+    
+    [CancelTaxTestRunner testCancelTax:cancelTaxRequest testCase:self responseHandler:^(AvaTaxCancelTaxResponse* response) {
+        GHAssertTrue(response.ResultCode == ResultCode_Success, @"");
+        GHAssertTrue([response.DocId isEqualToString:@"40534925"], @"");
+    }];
 }
 
 @end

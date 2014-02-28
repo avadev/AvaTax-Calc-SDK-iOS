@@ -8,10 +8,18 @@
 
 #import "AvaTaxResponse.h"
 
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCancelTaxResponse : AvaTaxResponse
 
-@property NSString* TransactionId;
-@property NSString* DocId;
+@property NSString<Optional>* TransactionId;
+@property NSString<Optional>* DocId;
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@interface AvaTaxCancelTaxResponseWrapper : JSONModel
+
+@property AvaTaxCancelTaxResponse* CancelTaxResult;
 
 @end

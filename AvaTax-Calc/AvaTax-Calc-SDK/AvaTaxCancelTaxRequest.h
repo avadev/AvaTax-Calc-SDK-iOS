@@ -7,6 +7,7 @@
 //
 
 #import "JSONModel.h"
+#import "AvaTaxGetTaxRequest.h"
 
 typedef enum {
     CancelCode_Unspecified,
@@ -24,10 +25,10 @@ typedef enum {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxCancelTaxRequest : JSONModel
 
-@property NSString<Optional>* CompanyCode;
-@property NSString<Optional>* DocType;
-@property NSString<Optional>* DocCode;
-@property AvaTaxCancelCode CancelCode;
-@property NSString<Optional>* DocId;
+@property NSString<Optional>*   CompanyCode;
+@property AvaTaxDocType         DocType;
+@property NSString<Optional>*   DocCode;
+@property AvaTaxCancelCode      CancelCode;
+@property NSString<Optional>*   DocId;
 
 @end
