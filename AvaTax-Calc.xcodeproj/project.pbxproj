@@ -49,16 +49,6 @@
 		D49827A918623AAA00807C24 /* libAvaTax-Calc-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4982761185FC07A00807C24 /* libAvaTax-Calc-SDK.a */; };
 		D49827AA18623AC100807C24 /* AvaTaxBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D498279F185FC65900807C24 /* AvaTaxBase64.m */; };
 		D4C425BB1877475A0030EF00 /* AvaTaxGetTaxRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425BA1877475A0030EF00 /* AvaTaxGetTaxRequest.m */; };
-		D4C425D6187747C50030EF00 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425BF187747C50030EF00 /* JSONModel.m */; };
-		D4C425D7187747C50030EF00 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425C1187747C50030EF00 /* JSONModelArray.m */; };
-		D4C425D8187747C50030EF00 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425C3187747C50030EF00 /* JSONModelClassProperty.m */; };
-		D4C425D9187747C50030EF00 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425C5187747C50030EF00 /* JSONModelError.m */; };
-		D4C425DA187747C50030EF00 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425C8187747C50030EF00 /* NSArray+JSONModel.m */; };
-		D4C425DB187747C50030EF00 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425CC187747C50030EF00 /* JSONAPI.m */; };
-		D4C425DC187747C50030EF00 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425CE187747C50030EF00 /* JSONHTTPClient.m */; };
-		D4C425DD187747C50030EF00 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425D0187747C50030EF00 /* JSONModel+networking.m */; };
-		D4C425DE187747C50030EF00 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425D3187747C50030EF00 /* JSONKeyMapper.m */; };
-		D4C425DF187747C50030EF00 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C425D5187747C50030EF00 /* JSONValueTransformer.m */; };
 		D4C425E2187748B80030EF00 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C425E0187748B10030EF00 /* SystemConfiguration.framework */; };
 		D4C425EE18775FD20030EF00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272D185FA78100807C24 /* Foundation.framework */; };
 		D4C425EF18775FD20030EF00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498272F185FA78100807C24 /* CoreGraphics.framework */; };
@@ -71,6 +61,16 @@
 		D4C4261C1877699E0030EF00 /* AvaTaxWebCall.m in Sources */ = {isa = PBXBuildFile; fileRef = D49827A71862333500807C24 /* AvaTaxWebCall.m */; };
 		D4C4261F187771FF0030EF00 /* JSONModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C4261E187771FF0030EF00 /* JSONModelTests.m */; };
 		D4C42622187E05CA0030EF00 /* AvaTaxGetTaxResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C42621187E05CA0030EF00 /* AvaTaxGetTaxResponse.m */; };
+		D4CFEC2318C14E3A00A0D547 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC0C18C14E3A00A0D547 /* JSONModel.m */; };
+		D4CFEC2418C14E3A00A0D547 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC0E18C14E3A00A0D547 /* JSONModelArray.m */; };
+		D4CFEC2518C14E3A00A0D547 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC1018C14E3A00A0D547 /* JSONModelClassProperty.m */; };
+		D4CFEC2618C14E3A00A0D547 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC1218C14E3A00A0D547 /* JSONModelError.m */; };
+		D4CFEC2718C14E3A00A0D547 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC1518C14E3A00A0D547 /* NSArray+JSONModel.m */; };
+		D4CFEC2818C14E3A00A0D547 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC1918C14E3A00A0D547 /* JSONAPI.m */; };
+		D4CFEC2918C14E3A00A0D547 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC1B18C14E3A00A0D547 /* JSONHTTPClient.m */; };
+		D4CFEC2A18C14E3A00A0D547 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC1D18C14E3A00A0D547 /* JSONModel+networking.m */; };
+		D4CFEC2B18C14E3A00A0D547 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC2018C14E3A00A0D547 /* JSONKeyMapper.m */; };
+		D4CFEC2C18C14E3A00A0D547 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CFEC2218C14E3A00A0D547 /* JSONValueTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -156,27 +156,6 @@
 		D49827AB18626B6F00807C24 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../third_party/gh-unit-framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
 		D4C425B91877475A0030EF00 /* AvaTaxGetTaxRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxGetTaxRequest.h; sourceTree = "<group>"; };
 		D4C425BA1877475A0030EF00 /* AvaTaxGetTaxRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxGetTaxRequest.m; sourceTree = "<group>"; };
-		D4C425BE187747C50030EF00 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
-		D4C425BF187747C50030EF00 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
-		D4C425C0187747C50030EF00 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
-		D4C425C1187747C50030EF00 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
-		D4C425C2187747C50030EF00 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
-		D4C425C3187747C50030EF00 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
-		D4C425C4187747C50030EF00 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
-		D4C425C5187747C50030EF00 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
-		D4C425C7187747C50030EF00 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
-		D4C425C8187747C50030EF00 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
-		D4C425C9187747C50030EF00 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
-		D4C425CB187747C50030EF00 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
-		D4C425CC187747C50030EF00 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
-		D4C425CD187747C50030EF00 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
-		D4C425CE187747C50030EF00 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
-		D4C425CF187747C50030EF00 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
-		D4C425D0187747C50030EF00 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
-		D4C425D2187747C50030EF00 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
-		D4C425D3187747C50030EF00 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
-		D4C425D4187747C50030EF00 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
-		D4C425D5187747C50030EF00 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		D4C425E0187748B10030EF00 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D4C425ED18775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AvaTax-Calc-SDK-GHUnitTests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C425F318775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AvaTax-Calc-SDK-GHUnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -188,6 +167,27 @@
 		D4C4261E187771FF0030EF00 /* JSONModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelTests.m; sourceTree = "<group>"; };
 		D4C42620187E05CA0030EF00 /* AvaTaxGetTaxResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxGetTaxResponse.h; sourceTree = "<group>"; };
 		D4C42621187E05CA0030EF00 /* AvaTaxGetTaxResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxGetTaxResponse.m; sourceTree = "<group>"; };
+		D4CFEC0B18C14E3A00A0D547 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		D4CFEC0C18C14E3A00A0D547 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		D4CFEC0D18C14E3A00A0D547 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
+		D4CFEC0E18C14E3A00A0D547 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
+		D4CFEC0F18C14E3A00A0D547 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		D4CFEC1018C14E3A00A0D547 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		D4CFEC1118C14E3A00A0D547 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		D4CFEC1218C14E3A00A0D547 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		D4CFEC1418C14E3A00A0D547 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		D4CFEC1518C14E3A00A0D547 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		D4CFEC1618C14E3A00A0D547 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		D4CFEC1818C14E3A00A0D547 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		D4CFEC1918C14E3A00A0D547 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		D4CFEC1A18C14E3A00A0D547 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		D4CFEC1B18C14E3A00A0D547 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		D4CFEC1C18C14E3A00A0D547 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		D4CFEC1D18C14E3A00A0D547 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		D4CFEC1F18C14E3A00A0D547 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		D4CFEC2018C14E3A00A0D547 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		D4CFEC2118C14E3A00A0D547 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		D4CFEC2218C14E3A00A0D547 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +230,7 @@
 		D4982721185FA78100807C24 = {
 			isa = PBXGroup;
 			children = (
-				D4C425BC187747C50030EF00 /* JSONModel */,
+				D4CFEC0918C14E3A00A0D547 /* JSONModel */,
 				D4982733185FA78100807C24 /* AvaTax-Calc */,
 				D4982763185FC07A00807C24 /* AvaTax-Calc-SDK */,
 				D4C425F118775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests */,
@@ -337,67 +337,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D4C425BC187747C50030EF00 /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				D4C425BD187747C50030EF00 /* JSONModel */,
-				D4C425C6187747C50030EF00 /* JSONModelCategories */,
-				D4C425C9187747C50030EF00 /* JSONModelLib.h */,
-				D4C425CA187747C50030EF00 /* JSONModelNetworking */,
-				D4C425D1187747C50030EF00 /* JSONModelTransformations */,
-			);
-			name = JSONModel;
-			path = ../third_party/JSONModel;
-			sourceTree = "<group>";
-		};
-		D4C425BD187747C50030EF00 /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				D4C425BE187747C50030EF00 /* JSONModel.h */,
-				D4C425BF187747C50030EF00 /* JSONModel.m */,
-				D4C425C0187747C50030EF00 /* JSONModelArray.h */,
-				D4C425C1187747C50030EF00 /* JSONModelArray.m */,
-				D4C425C2187747C50030EF00 /* JSONModelClassProperty.h */,
-				D4C425C3187747C50030EF00 /* JSONModelClassProperty.m */,
-				D4C425C4187747C50030EF00 /* JSONModelError.h */,
-				D4C425C5187747C50030EF00 /* JSONModelError.m */,
-			);
-			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		D4C425C6187747C50030EF00 /* JSONModelCategories */ = {
-			isa = PBXGroup;
-			children = (
-				D4C425C7187747C50030EF00 /* NSArray+JSONModel.h */,
-				D4C425C8187747C50030EF00 /* NSArray+JSONModel.m */,
-			);
-			path = JSONModelCategories;
-			sourceTree = "<group>";
-		};
-		D4C425CA187747C50030EF00 /* JSONModelNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				D4C425CB187747C50030EF00 /* JSONAPI.h */,
-				D4C425CC187747C50030EF00 /* JSONAPI.m */,
-				D4C425CD187747C50030EF00 /* JSONHTTPClient.h */,
-				D4C425CE187747C50030EF00 /* JSONHTTPClient.m */,
-				D4C425CF187747C50030EF00 /* JSONModel+networking.h */,
-				D4C425D0187747C50030EF00 /* JSONModel+networking.m */,
-			);
-			path = JSONModelNetworking;
-			sourceTree = "<group>";
-		};
-		D4C425D1187747C50030EF00 /* JSONModelTransformations */ = {
-			isa = PBXGroup;
-			children = (
-				D4C425D2187747C50030EF00 /* JSONKeyMapper.h */,
-				D4C425D3187747C50030EF00 /* JSONKeyMapper.m */,
-				D4C425D4187747C50030EF00 /* JSONValueTransformer.h */,
-				D4C425D5187747C50030EF00 /* JSONValueTransformer.m */,
-			);
-			path = JSONModelTransformations;
-			sourceTree = "<group>";
-		};
 		D4C425F118775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +364,67 @@
 				D4C425F918775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4CFEC0918C14E3A00A0D547 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFEC0A18C14E3A00A0D547 /* JSONModel */,
+				D4CFEC1318C14E3A00A0D547 /* JSONModelCategories */,
+				D4CFEC1618C14E3A00A0D547 /* JSONModelLib.h */,
+				D4CFEC1718C14E3A00A0D547 /* JSONModelNetworking */,
+				D4CFEC1E18C14E3A00A0D547 /* JSONModelTransformations */,
+			);
+			name = JSONModel;
+			path = third_party/JSONModel;
+			sourceTree = "<group>";
+		};
+		D4CFEC0A18C14E3A00A0D547 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFEC0B18C14E3A00A0D547 /* JSONModel.h */,
+				D4CFEC0C18C14E3A00A0D547 /* JSONModel.m */,
+				D4CFEC0D18C14E3A00A0D547 /* JSONModelArray.h */,
+				D4CFEC0E18C14E3A00A0D547 /* JSONModelArray.m */,
+				D4CFEC0F18C14E3A00A0D547 /* JSONModelClassProperty.h */,
+				D4CFEC1018C14E3A00A0D547 /* JSONModelClassProperty.m */,
+				D4CFEC1118C14E3A00A0D547 /* JSONModelError.h */,
+				D4CFEC1218C14E3A00A0D547 /* JSONModelError.m */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		D4CFEC1318C14E3A00A0D547 /* JSONModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFEC1418C14E3A00A0D547 /* NSArray+JSONModel.h */,
+				D4CFEC1518C14E3A00A0D547 /* NSArray+JSONModel.m */,
+			);
+			path = JSONModelCategories;
+			sourceTree = "<group>";
+		};
+		D4CFEC1718C14E3A00A0D547 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFEC1818C14E3A00A0D547 /* JSONAPI.h */,
+				D4CFEC1918C14E3A00A0D547 /* JSONAPI.m */,
+				D4CFEC1A18C14E3A00A0D547 /* JSONHTTPClient.h */,
+				D4CFEC1B18C14E3A00A0D547 /* JSONHTTPClient.m */,
+				D4CFEC1C18C14E3A00A0D547 /* JSONModel+networking.h */,
+				D4CFEC1D18C14E3A00A0D547 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		D4CFEC1E18C14E3A00A0D547 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				D4CFEC1F18C14E3A00A0D547 /* JSONKeyMapper.h */,
+				D4CFEC2018C14E3A00A0D547 /* JSONKeyMapper.m */,
+				D4CFEC2118C14E3A00A0D547 /* JSONValueTransformer.h */,
+				D4CFEC2218C14E3A00A0D547 /* JSONValueTransformer.m */,
+			);
+			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,31 +545,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C425D9187747C50030EF00 /* JSONModelError.m in Sources */,
-				D4C425DA187747C50030EF00 /* NSArray+JSONModel.m in Sources */,
-				D4C425D8187747C50030EF00 /* JSONModelClassProperty.m in Sources */,
 				D4337F9918889C74004B19BB /* AvaTaxResponse.m in Sources */,
+				D4CFEC2618C14E3A00A0D547 /* JSONModelError.m in Sources */,
+				D4CFEC2318C14E3A00A0D547 /* JSONModel.m in Sources */,
 				D4337F9F1888AE58004B19BB /* AvaTaxValidatedAddress.m in Sources */,
 				D49827AA18623AC100807C24 /* AvaTaxBase64.m in Sources */,
-				D4C425DE187747C50030EF00 /* JSONKeyMapper.m in Sources */,
 				D4C4261C1877699E0030EF00 /* AvaTaxWebCall.m in Sources */,
 				D4337FD018BFB74B004B19BB /* AvaTaxUtil.m in Sources */,
 				D4C425BB1877475A0030EF00 /* AvaTaxGetTaxRequest.m in Sources */,
-				D4C425D7187747C50030EF00 /* JSONModelArray.m in Sources */,
+				D4CFEC2418C14E3A00A0D547 /* JSONModelArray.m in Sources */,
 				D4C42622187E05CA0030EF00 /* AvaTaxGetTaxResponse.m in Sources */,
-				D4C425DD187747C50030EF00 /* JSONModel+networking.m in Sources */,
 				D4337F9C18889DEE004B19BB /* AvaTaxValidateAddressResponse.m in Sources */,
 				D4865FF518887DDC005F9F6C /* AvaTaxAddress.m in Sources */,
+				D4CFEC2518C14E3A00A0D547 /* JSONModelClassProperty.m in Sources */,
+				D4CFEC2A18C14E3A00A0D547 /* JSONModel+networking.m in Sources */,
 				D4337FA21897333A004B19BB /* AvaTaxCancelTaxRequest.m in Sources */,
+				D4CFEC2818C14E3A00A0D547 /* JSONAPI.m in Sources */,
 				D49827A418622F8F00807C24 /* AvaTaxCalc.m in Sources */,
 				D4337FA818A18B06004B19BB /* AvaTaxTaxSummaryRequest.m in Sources */,
+				D4CFEC2C18C14E3A00A0D547 /* JSONValueTransformer.m in Sources */,
+				D4CFEC2B18C14E3A00A0D547 /* JSONKeyMapper.m in Sources */,
+				D4CFEC2718C14E3A00A0D547 /* NSArray+JSONModel.m in Sources */,
 				D4337FAB18A18BC6004B19BB /* AvaTaxTaxSummaryResponse.m in Sources */,
-				D4C425DB187747C50030EF00 /* JSONAPI.m in Sources */,
 				D4337FAE18A1C9CE004B19BB /* AvaTaxEstimateTaxResponse.m in Sources */,
-				D4C425DF187747C50030EF00 /* JSONValueTransformer.m in Sources */,
+				D4CFEC2918C14E3A00A0D547 /* JSONHTTPClient.m in Sources */,
 				D4337FA5189842C8004B19BB /* AvaTaxCancelTaxResponse.m in Sources */,
-				D4C425DC187747C50030EF00 /* JSONHTTPClient.m in Sources */,
-				D4C425D6187747C50030EF00 /* JSONModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
