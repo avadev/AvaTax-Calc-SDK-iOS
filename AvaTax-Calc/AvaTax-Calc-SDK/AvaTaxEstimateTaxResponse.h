@@ -11,8 +11,6 @@
 @protocol AvaTaxTaxDetail
 @end
 
-@class AvaTaxTaxDetail;
-
 /**
  * Documentation:
  * http://developer.avalara.com/api-docs/rest/tax/get
@@ -23,7 +21,7 @@
 
 @property double Rate;
 @property double Tax;
-@property NSArray<AvaTaxTaxDetail>* TaxDetails;
+@property NSArray<AvaTaxTaxDetail,Optional>* TaxDetails;
 
 @end
 

@@ -68,7 +68,7 @@ NSString* const HTTP_METHOD_DELETE = @"DELETE";
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"%@", [self responseAsString]);
+    NSLog(@"AvaTax received response:\n%@", [self responseAsString]);
     if (_target != nil && [_target respondsToSelector:_selector]) {
         [_target performSelector:_selector withObject:self];
         

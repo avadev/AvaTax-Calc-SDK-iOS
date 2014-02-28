@@ -37,10 +37,10 @@ typedef enum {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AvaTaxResponseMessage : JSONModel
 
-@property NSString* Summary;
-@property NSString* Details;
+@property NSString<Optional>* Summary;
+@property NSString<Optional>* Details;
 @property AvaTaxResultCode Severity;
-@property NSString* Source;
-@property NSString* RefersTo;
+@property NSString<Optional>* Source;
+@property NSString<Optional>* RefersTo;
 
 @end

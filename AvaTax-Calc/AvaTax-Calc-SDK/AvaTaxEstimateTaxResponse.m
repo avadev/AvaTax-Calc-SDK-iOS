@@ -11,4 +11,18 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AvaTaxEstimateTaxResponse
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    if ([propertyName isEqualToString:@"Tax"] ||
+        [propertyName isEqualToString:@"Rate"]) {
+        return YES;
+    }
+    
+    return [super propertyIsOptional:propertyName];
+}
+
+@end
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@implementation AvaTaxTaxDetail
+
 @end
