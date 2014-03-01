@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		D4CFEC7C18C1592600A0D547 /* AvaTaxCalc-UniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D4CFEC7D18C1592600A0D547 /* Build configuration list for PBXAggregateTarget "AvaTaxCalc-UniversalLib" */;
+			buildPhases = (
+				D4CFEC8018C159F700A0D547 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "AvaTaxCalc-UniversalLib";
+			productName = "AvaTaxCalc-UniversalLib";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		D4337F9918889C74004B19BB /* AvaTaxResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337F9818889C74004B19BB /* AvaTaxResponse.m */; };
 		D4337F9C18889DEE004B19BB /* AvaTaxValidateAddressResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D4337F9B18889DEE004B19BB /* AvaTaxValidateAddressResponse.m */; };
@@ -147,10 +161,10 @@
 		D4982765185FC07A00807C24 /* AvaTax-Calc-SDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AvaTax-Calc-SDK-Prefix.pch"; sourceTree = "<group>"; };
 		D4982783185FC11500807C24 /* SampleGetTaxCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleGetTaxCall.h; sourceTree = "<group>"; };
 		D4982784185FC11500807C24 /* SampleGetTaxCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleGetTaxCall.m; sourceTree = "<group>"; };
-		D498279E185FC65900807C24 /* AvaTaxBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvaTaxBase64.h; path = "../AvaTax-Calc/AvaTaxBase64.h"; sourceTree = "<group>"; };
-		D498279F185FC65900807C24 /* AvaTaxBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvaTaxBase64.m; path = "../AvaTax-Calc/AvaTaxBase64.m"; sourceTree = "<group>"; };
-		D49827A118622F8B00807C24 /* AvaTaxCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvaTaxCalc.h; path = "../AvaTax-Calc/AvaTaxCalc.h"; sourceTree = "<group>"; };
-		D49827A218622F8B00807C24 /* AvaTaxCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvaTaxCalc.m; path = "../AvaTax-Calc/AvaTaxCalc.m"; sourceTree = "<group>"; };
+		D498279E185FC65900807C24 /* AvaTaxBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxBase64.h; sourceTree = "<group>"; };
+		D498279F185FC65900807C24 /* AvaTaxBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxBase64.m; sourceTree = "<group>"; };
+		D49827A118622F8B00807C24 /* AvaTaxCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxCalc.h; sourceTree = "<group>"; };
+		D49827A218622F8B00807C24 /* AvaTaxCalc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxCalc.m; sourceTree = "<group>"; };
 		D49827A61862333500807C24 /* AvaTaxWebCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvaTaxWebCall.h; sourceTree = "<group>"; };
 		D49827A71862333500807C24 /* AvaTaxWebCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvaTaxWebCall.m; sourceTree = "<group>"; };
 		D49827AB18626B6F00807C24 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../third_party/gh-unit-framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
@@ -505,6 +519,7 @@
 				D4982729185FA78100807C24 /* AvaTax-Calc */,
 				D4982760185FC07A00807C24 /* AvaTax-Calc-SDK */,
 				D4C425EC18775FD20030EF00 /* AvaTax-Calc-SDK-GHUnitTests */,
+				D4CFEC7C18C1592600A0D547 /* AvaTaxCalc-UniversalLib */,
 			);
 		};
 /* End PBXProject section */
@@ -528,6 +543,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4CFEC8018C159F700A0D547 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/rob/code/AvaTax-Calc-SDK-iOS/universalLibBuildScript";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4982726185FA78100807C24 /* Sources */ = {
@@ -783,6 +814,20 @@
 			};
 			name = Release;
 		};
+		D4CFEC7E18C1592600A0D547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4CFEC7F18C1592600A0D547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -821,6 +866,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D4CFEC7D18C1592600A0D547 /* Build configuration list for PBXAggregateTarget "AvaTaxCalc-UniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4CFEC7E18C1592600A0D547 /* Debug */,
+				D4CFEC7F18C1592600A0D547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

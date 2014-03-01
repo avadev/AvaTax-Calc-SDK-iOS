@@ -1,0 +1,16 @@
+# define output folder environment variable
+UNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal
+LIBRARY_NAME=libAvaTax-Calc-SDK.a
+ 
+# Step 1. Build Device and Simulator versions
+xcodebuild -target AvaTax-Calc-SDK ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR="${BUILD_DIR}" BUILD_ROOT="${BUILD_ROOT}"
+xcodebuild -target AvaTax-Calc-SDK -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR="${BUILD_DIR}" BUILD_ROOT="${BUILD_ROOT}"
+ 
+# make sure the output directory exists
+mkdir -p "${UNIVERSAL_OUTPUTFOLDER}"
+ 
+# Step 2. Create universal binary file using lipo
+lipo -create -output "${UNIVERSAL_OUTPUTFOLDER}/${LIBRARY_NAME}" "${BUILD_DIR}/${CONFIGURATION}-iphoneos/${LIBRARY_NAME}" "${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${LIBRARY_NAME}"
+ 
+# Last touch. copy the header files. Just for convenience
+cp -R "${BUILD_DIR}/${CONFIGURATION}-iphoneos/include" "${UNIVERSAL_OUTPUTFOLDER}/"
