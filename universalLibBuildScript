@@ -12,5 +12,15 @@ mkdir -p "${UNIVERSAL_OUTPUTFOLDER}"
 # Step 2. Create universal binary file using lipo
 lipo -create -output "${UNIVERSAL_OUTPUTFOLDER}/${LIBRARY_NAME}" "${BUILD_DIR}/${CONFIGURATION}-iphoneos/${LIBRARY_NAME}" "${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${LIBRARY_NAME}"
  
-# Last touch. copy the header files. Just for convenience
+# Copy the header files so they'll be in the same place as the produced static library.
 cp -R "${BUILD_DIR}/${CONFIGURATION}-iphoneos/include" "${UNIVERSAL_OUTPUTFOLDER}/"
+
+# Add the README file
+cp "${PROJECT_DIR}/README.txt" "${UNIVERSAL_OUTPUTFOLDER}/"
+
+# Conveniently create a zip of the whole thing
+RENAMED_SDK_FOLDER=${BUILD_DIR}/AvaTaxSDK
+cp -R -f "${UNIVERSAL_OUTPUTFOLDER}" "${RENAMED_SDK_FOLDER}"
+ditto -ck --rsrc --sequesterRsrc --keepParent  "${RENAMED_SDK_FOLDER}" "${BUILD_DIR}/AvaTaxSDK-iOS.zip"
+rm -r "${RENAMED_SDK_FOLDER}"
+
