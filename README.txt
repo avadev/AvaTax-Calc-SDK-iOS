@@ -1,6 +1,25 @@
 Avalara iOS SDK - ReadMe
 
-To build a copy of the SDK to hand off to another developer:
+To include the SDK in your own Xcode project when you have access to the SDK’s github repo:
+
+1. Create your Xcode project.
+2. In the root directory of your Xcode project, run ‘git clone https://github.com/avadev/AvaTax-Calc-SDK-iOS.git'.  That will create the folder “AvaTax-Calc-SDK-iOS” as a sub-directory of your project.
+3. Open your Xcode project.
+4. In the Project Navigator in Xcode (that left column,) right-click on the “Frameworks” group and choose ‘Add Files to “YourProjectName”...’
+5. Go in to AvaTax-Calc-SDK-iOS and select AvaTax-Calc.xcodeproj.
+6. In the Project Navigator again, click on your project’s icon at the very top of the column so that you see the editor for your target’s settings.
+7. Under General, scroll down to “Linked Frameworks and Libraries.”  Click the ‘+’ button, and the top option should say ‘libAvaTax-Calc-SDK.a’ with a little library-building icon.  Select that and click ‘Add’.
+8. Switch to the ‘Build Settings’ tab at the top, and find the build setting called ‘Header Search Paths’.  Edit it, and add this relative path:  “AvaTax-Calc-SDK-iOS/build/Debug-universal/include/AvaTax-Calc-SDK”
+
+In your project’s code, add #import “AvaTaxCalc.h”, and then alloc & init an instance of the class AvaTaxCalc, passing it your Avalara AdminConsole username & password on init. Using an instance (or multiple instances) of AvaTaxCalc is how you access all the API functionality provided by the SDK.
+
+
+
+====
+
+An alternative to sharing the full source from github is to build and hand off the static library.
+
+To build a copy of the SDK as a static library to hand off to another developer:
 
 1. Open the AvaTax-Calc Xcode project.
 2. In Xcode’s toolbar, where you can select which scheme to build, select “AvaTaxCalc-UniveralLib.”  It will have an icon that looks like an archery target.  It doesn’t matter if you choose iOS Device or iOS Simulator here, it will be built for both.
