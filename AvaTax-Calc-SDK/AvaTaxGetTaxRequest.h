@@ -26,7 +26,9 @@ typedef enum {
     DocType_ReturnOrder,
     DocType_ReturnInvoice,
     DocType_PurchaseOrder,
-    DocType_PurchaseInvoice
+    DocType_PurchaseInvoice,
+    DocType_ReverseChargeOrder,
+    DocType_ReverseChargeInvoice
 } AvaTaxDocType;
 typedef enum  {
     DetailLevel_Tax,

@@ -93,6 +93,10 @@ NSString* const CustomerUsageType_R_NonResident = @"R";
         self.DocType = DocType_PurchaseOrder;
     } else if ([docTypeString isEqualToString:@"PurchaseInvoice"]) {
         self.DocType = DocType_PurchaseInvoice;
+    } else if ([docTypeString isEqualToString:@"ReverseChargeOrder"]) {
+        self.DocType = DocType_ReverseChargeOrder;
+    } else if ([docTypeString isEqualToString:@"ReverseChargeInvoice"]) {
+        self.DocType = DocType_ReverseChargeInvoice;    
     }
 }
 
@@ -116,6 +120,12 @@ NSString* const CustomerUsageType_R_NonResident = @"R";
         case DocType_PurchaseInvoice:
             return @"PurchaseInvoice";
             break;
+        case DocType_ReverseChargeOrder:
+            return @"ReverseChargeOrder";
+            break;
+        case DocType_ReverseChargeInvoice:
+            return @"ReverseChargeInvoice";
+            break;                        
         default:
             return nil;
             break;
