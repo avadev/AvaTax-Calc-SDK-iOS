@@ -1,5 +1,7 @@
 Avalara iOS SDK - ReadMe
 
+[Other Samples](http://developer.avalara.com/api-docs/api-sample-code)
+
 To include the SDK in your own Xcode project when you have access to the SDK’s github repo:
 
 1. Create your Xcode project.
