@@ -15,7 +15,7 @@ To include the SDK in your own Xcode project when you have access to the SDK’s
 
 In your project’s code, add #import “AvaTaxCalc.h”, and then alloc & init an instance of the class AvaTaxCalc, passing it your Avalara AdminConsole username & password on init. Using an instance (or multiple instances) of AvaTaxCalc is how you access all the API functionality provided by the SDK.
 
-
+You will also find the JSONModel Library in the Third Party folder. This is required to serialize and de-serialize JSON into objects. You can also download it directly from the JSONModel Repository here : https://github.com/icanzilb/JSONModel
 
 ====
 
